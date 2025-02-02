@@ -31,7 +31,7 @@ typedef enum {
 environment_t envs[_num_enclaves];
 // 'Create' and initialize the environments in the program
 void lf_create_environments() {
-    environment_init(&envs[senderreceiver_main],"senderreceiver",senderreceiver_main,_lf_number_of_workers,2,1,0,0,1,0,0,0,NULL);
+    environment_init(&envs[senderreceiver_main],"senderreceiver",senderreceiver_main,_lf_number_of_workers,2,1,1,0,3,0,0,0,NULL);
 }
 // Update the pointer argument to point to the beginning of the environment array
 // and return the size of that array
@@ -97,6 +97,7 @@ void _lf_initialize_trigger_objects() {
         // width of -2 indicates that it is not a multiport.
         senderreceiver_sender_self[0]->_lf_in_width = -2;
         envs[senderreceiver_main].startup_reactions[startup_reaction_count[senderreceiver_main]++] = &senderreceiver_sender_self[0]->_lf__reaction_0;
+        envs[senderreceiver_main].shutdown_reactions[shutdown_reaction_count[senderreceiver_main]++] = &senderreceiver_sender_self[0]->_lf__reaction_3;
         { // For scoping
             static int _initial[] = {0,0,1,1,0,1,0,0};
             senderreceiver_sender_self[0]->sequence = _initial;
@@ -108,6 +109,14 @@ void _lf_initialize_trigger_objects() {
         { // For scoping
             static int _initial = 0;
             senderreceiver_sender_self[0]->m = _initial;
+        } // End scoping.
+        { // For scoping
+            static int _initial = 0;
+            senderreceiver_sender_self[0]->x = _initial;
+        } // End scoping.
+        { // For scoping
+            static int _initial = 0;
+            senderreceiver_sender_self[0]->started = _initial;
         } // End scoping.
         { // For scoping
             static ModelState _initial = 0;
@@ -122,6 +131,8 @@ void _lf_initialize_trigger_objects() {
     
         senderreceiver_sender_self[0]->_lf__reaction_0.deadline = NEVER;
         senderreceiver_sender_self[0]->_lf__reaction_1.deadline = NEVER;
+        senderreceiver_sender_self[0]->_lf__reaction_2.deadline = NEVER;
+        senderreceiver_sender_self[0]->_lf__reaction_3.deadline = NEVER;
         //***** End initializing senderreceiver.sender
     }
     //***** End initializing senderreceiver
@@ -177,6 +188,22 @@ void _lf_initialize_trigger_objects() {
             }
             
             // ** End initialization for reaction 1 of senderreceiver.sender
+            // Total number of outputs (single ports and multiport channels)
+            // produced by reaction_3 of senderreceiver.sender.
+            senderreceiver_sender_self[0]->_lf__reaction_2.num_outputs = 0;
+            {
+                int count = 0; SUPPRESS_UNUSED_WARNING(count);
+            }
+            
+            // ** End initialization for reaction 2 of senderreceiver.sender
+            // Total number of outputs (single ports and multiport channels)
+            // produced by reaction_4 of senderreceiver.sender.
+            senderreceiver_sender_self[0]->_lf__reaction_3.num_outputs = 0;
+            {
+                int count = 0; SUPPRESS_UNUSED_WARNING(count);
+            }
+            
+            // ** End initialization for reaction 3 of senderreceiver.sender
         
         }
         // **** End of deferred initialize for senderreceiver.sender
@@ -246,7 +273,9 @@ void _lf_initialize_trigger_objects() {
         
             for (int index486184027c8990b = 0; index486184027c8990b < 1; index486184027c8990b++) { senderreceiver_sender_self[0]->_lf_up._base.source_reactor = (self_base_t*)senderreceiver_sender_self[0]; }
             for (int index486184027c8990b = 0; index486184027c8990b < 1; index486184027c8990b++) { senderreceiver_sender_self[0]->_lf_down._base.source_reactor = (self_base_t*)senderreceiver_sender_self[0]; }
-        
+            {
+                int triggers_index[1] = { 0 }; // Number of bank members with the reaction.
+            }
         
         }
         // **** End of non-nested deferred initialize for senderreceiver.sender
@@ -273,6 +302,8 @@ void _lf_initialize_trigger_objects() {
         }
     }
     // Connect inputs and outputs for reactor senderreceiver.sender.
+    
+    
     {
     }
     {
@@ -292,6 +323,20 @@ void _lf_initialize_trigger_objects() {
     {
         int count = 0; SUPPRESS_UNUSED_WARNING(count);
         {
+            // Add output port senderreceiver.sender.up to array of is_present fields.
+            envs[senderreceiver_main].is_present_fields[(0) * 2 + 1 + count] = &senderreceiver_sender_self[0]->_lf_up.is_present;
+            #ifdef FEDERATED_DECENTRALIZED
+            // Add output port senderreceiver.sender.up to array of intended_tag fields.
+            envs[senderreceiver_main]._lf_intended_tag_fields[(0) * 2 + 1 + count] = &senderreceiver_sender_self[0]->_lf_up.intended_tag;
+            #endif // FEDERATED_DECENTRALIZED
+            count++;
+            // Add output port senderreceiver.sender.down to array of is_present fields.
+            envs[senderreceiver_main].is_present_fields[(0) * 2 + 1 + count] = &senderreceiver_sender_self[0]->_lf_down.is_present;
+            #ifdef FEDERATED_DECENTRALIZED
+            // Add output port senderreceiver.sender.down to array of intended_tag fields.
+            envs[senderreceiver_main]._lf_intended_tag_fields[(0) * 2 + 1 + count] = &senderreceiver_sender_self[0]->_lf_down.intended_tag;
+            #endif // FEDERATED_DECENTRALIZED
+            count++;
         }
     }
     
@@ -314,16 +359,22 @@ void _lf_initialize_trigger_objects() {
             // index is the OR of level 1 and 
             // deadline 9223372036854775807 shifted left 16 bits.
             senderreceiver_sender_self[0]->_lf__reaction_1.index = lf_combine_deadline_and_level(9223372036854775807, 1);
+            // index is the OR of level 2 and 
+            // deadline 9223372036854775807 shifted left 16 bits.
+            senderreceiver_sender_self[0]->_lf__reaction_2.index = lf_combine_deadline_and_level(9223372036854775807, 2);
+            // index is the OR of level 3 and 
+            // deadline 9223372036854775807 shifted left 16 bits.
+            senderreceiver_sender_self[0]->_lf__reaction_3.index = lf_combine_deadline_and_level(9223372036854775807, 3);
         }
     
     }
     
     // Initialize the scheduler
-    size_t num_reactions_per_level[2] = 
-        {2, 1};
+    size_t num_reactions_per_level[4] = 
+        {2, 1, 1, 1};
     sched_params_t sched_params = (sched_params_t) {
                             .num_reactions_per_level = &num_reactions_per_level[0],
-                            .num_reactions_per_level_size = (size_t) 2};
+                            .num_reactions_per_level_size = (size_t) 4};
     lf_sched_init(
         &envs[senderreceiver_main],
         envs[senderreceiver_main].num_workers,

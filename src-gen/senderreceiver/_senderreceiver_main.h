@@ -3,8 +3,8 @@
 #include "include/core/reactor.h"
 #include "_sendermodel.h"
 #include "_bitgenerator.h"
-#ifndef TOP_LEVEL_PREAMBLE_1165973527_H
-#define TOP_LEVEL_PREAMBLE_1165973527_H
+#ifndef TOP_LEVEL_PREAMBLE_940375901_H
+#define TOP_LEVEL_PREAMBLE_940375901_H
 #include <stdlib.h>
 typedef enum {
     STATE_A = 0, STATE_B = 1,
@@ -26,11 +26,12 @@ void enqueue(queue_ss_t* queue, int value);
 int dequeue(queue_ss_t* queue);
 int get_front(queue_ss_t* queue);
 void deleteQueue(queue_ss_t* queue);
+int is_empty(queue_ss_t* queue);
 #endif
 typedef struct {
     struct self_base_t base;
-#line 33 "c:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\_senderreceiver_main.h"
 #line 34 "c:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\_senderreceiver_main.h"
+#line 35 "c:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\_senderreceiver_main.h"
 } _senderreceiver_main_main_self_t;
 _senderreceiver_main_main_self_t* new__senderreceiver_main();
 #endif // _SENDERRECEIVER_MAIN_H

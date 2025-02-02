@@ -26,7 +26,7 @@ events:
       Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
       Copyright (C) Microsoft Corporation. All rights reserved.
       
-      Build started 2/2/2025 6:15:36 PM.
+      Build started 2/2/2025 7:50:25 PM.
       Project "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\3.31.5\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
         Creating directory "Debug\\".
@@ -52,7 +52,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:01.30
+      Time Elapsed 00:00:02.23
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -71,8 +71,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-bjerl1"
-      binary: "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-bjerl1"
+      source: "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-2gm3b4"
+      binary: "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-2gm3b4"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -81,41 +81,41 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-bjerl1'
+        Change Dir: 'C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-2gm3b4'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" cmTC_b068d.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=15.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" cmTC_da8a3.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=15.0 /v:n
         Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
         Copyright (C) Microsoft Corporation. All rights reserved.
         
-        Build started 2/2/2025 6:15:38 PM.
-        Project "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bjerl1\\cmTC_b068d.vcxproj" on node 1 (default targets).
+        Build started 2/2/2025 7:50:28 PM.
+        Project "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2gm3b4\\cmTC_da8a3.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_b068d.dir\\Debug\\".
-          Creating directory "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bjerl1\\Debug\\".
-          Creating directory "cmTC_b068d.dir\\Debug\\cmTC_b068d.tlog\\".
+          Creating directory "cmTC_da8a3.dir\\Debug\\".
+          Creating directory "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2gm3b4\\Debug\\".
+          Creating directory "cmTC_da8a3.dir\\Debug\\cmTC_da8a3.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_b068d.dir\\Debug\\cmTC_b068d.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Creating "cmTC_da8a3.dir\\Debug\\cmTC_da8a3.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b068d.dir\\Debug\\\\" /Fd"cmTC_b068d.dir\\Debug\\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_da8a3.dir\\Debug\\\\" /Fd"cmTC_da8a3.dir\\Debug\\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x86
           Copyright (C) Microsoft Corporation.  All rights reserved.
           
           CMakeCCompilerABI.c
-          cl /c /Zi /W1 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b068d.dir\\Debug\\\\" /Fd"cmTC_b068d.dir\\Debug\\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W1 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_da8a3.dir\\Debug\\\\" /Fd"cmTC_da8a3.dir\\Debug\\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
           
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bjerl1\\Debug\\cmTC_b068d.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-bjerl1/Debug/cmTC_b068d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-bjerl1/Debug/cmTC_b068d.lib" /MACHINE:X86  /machine:X86 cmTC_b068d.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_b068d.vcxproj -> C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bjerl1\\Debug\\cmTC_b068d.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2gm3b4\\Debug\\cmTC_da8a3.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-2gm3b4/Debug/cmTC_da8a3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-2gm3b4/Debug/cmTC_da8a3.lib" /MACHINE:X86  /machine:X86 cmTC_da8a3.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_da8a3.vcxproj -> C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2gm3b4\\Debug\\cmTC_da8a3.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_b068d.dir\\Debug\\cmTC_b068d.tlog\\unsuccessfulbuild".
-          Touching "cmTC_b068d.dir\\Debug\\cmTC_b068d.tlog\\cmTC_b068d.lastbuildstate".
-        Done Building Project "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bjerl1\\cmTC_b068d.vcxproj" (default targets).
+          Deleting file "cmTC_da8a3.dir\\Debug\\cmTC_da8a3.tlog\\unsuccessfulbuild".
+          Touching "cmTC_da8a3.dir\\Debug\\cmTC_da8a3.tlog\\cmTC_da8a3.lastbuildstate".
+        Done Building Project "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2gm3b4\\cmTC_da8a3.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:01.33
+        Time Elapsed 00:00:01.88
         
       exitCode: 0
   -
@@ -158,8 +158,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-p2p1sa"
-      binary: "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-p2p1sa"
+      source: "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-14g1f1"
+      binary: "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-14g1f1"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -168,41 +168,41 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-p2p1sa'
+        Change Dir: 'C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-14g1f1'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" cmTC_65197.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=15.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" cmTC_84765.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=15.0 /v:n
         Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
         Copyright (C) Microsoft Corporation. All rights reserved.
         
-        Build started 2/2/2025 6:15:40 PM.
-        Project "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p2p1sa\\cmTC_65197.vcxproj" on node 1 (default targets).
+        Build started 2/2/2025 7:50:31 PM.
+        Project "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-14g1f1\\cmTC_84765.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_65197.dir\\Debug\\".
-          Creating directory "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p2p1sa\\Debug\\".
-          Creating directory "cmTC_65197.dir\\Debug\\cmTC_65197.tlog\\".
+          Creating directory "cmTC_84765.dir\\Debug\\".
+          Creating directory "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-14g1f1\\Debug\\".
+          Creating directory "cmTC_84765.dir\\Debug\\cmTC_84765.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_65197.dir\\Debug\\cmTC_65197.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Creating "cmTC_84765.dir\\Debug\\cmTC_84765.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_65197.dir\\Debug\\\\" /Fd"cmTC_65197.dir\\Debug\\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p2p1sa\\src.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_84765.dir\\Debug\\\\" /Fd"cmTC_84765.dir\\Debug\\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-14g1f1\\src.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x86
           Copyright (C) Microsoft Corporation.  All rights reserved.
           
           src.c
-          cl /c /Zi /W1 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_65197.dir\\Debug\\\\" /Fd"cmTC_65197.dir\\Debug\\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p2p1sa\\src.c"
+          cl /c /Zi /W1 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_84765.dir\\Debug\\\\" /Fd"cmTC_84765.dir\\Debug\\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-14g1f1\\src.c"
           
-        C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p2p1sa\\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p2p1sa\\cmTC_65197.vcxproj]
-        Done Building Project "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p2p1sa\\cmTC_65197.vcxproj" (default targets) -- FAILED.
+        C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-14g1f1\\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-14g1f1\\cmTC_84765.vcxproj]
+        Done Building Project "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-14g1f1\\cmTC_84765.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p2p1sa\\cmTC_65197.vcxproj" (default target) (1) ->
+        "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-14g1f1\\cmTC_84765.vcxproj" (default target) (1) ->
         (ClCompile target) -> 
-          C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p2p1sa\\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p2p1sa\\cmTC_65197.vcxproj]
+          C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-14g1f1\\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-14g1f1\\cmTC_84765.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:01.17
+        Time Elapsed 00:00:01.48
         
       exitCode: 1
   -
@@ -216,8 +216,8 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-i1nt41"
-      binary: "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-i1nt41"
+      source: "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-yxxmuh"
+      binary: "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-yxxmuh"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -226,38 +226,38 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-i1nt41'
+        Change Dir: 'C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-yxxmuh'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" cmTC_52afb.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=15.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" cmTC_d0eaa.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=15.0 /v:n
         Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
         Copyright (C) Microsoft Corporation. All rights reserved.
         
-        Build started 2/2/2025 6:15:42 PM.
-        Project "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i1nt41\\cmTC_52afb.vcxproj" on node 1 (default targets).
+        Build started 2/2/2025 7:50:33 PM.
+        Project "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yxxmuh\\cmTC_d0eaa.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_52afb.dir\\Debug\\".
-          Creating directory "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i1nt41\\Debug\\".
-          Creating directory "cmTC_52afb.dir\\Debug\\cmTC_52afb.tlog\\".
+          Creating directory "cmTC_d0eaa.dir\\Debug\\".
+          Creating directory "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yxxmuh\\Debug\\".
+          Creating directory "cmTC_d0eaa.dir\\Debug\\cmTC_d0eaa.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_52afb.dir\\Debug\\cmTC_52afb.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Creating "cmTC_d0eaa.dir\\Debug\\cmTC_d0eaa.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_52afb.dir\\Debug\\\\" /Fd"cmTC_52afb.dir\\Debug\\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i1nt41\\CheckFunctionExists.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d0eaa.dir\\Debug\\\\" /Fd"cmTC_d0eaa.dir\\Debug\\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yxxmuh\\CheckFunctionExists.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x86
           Copyright (C) Microsoft Corporation.  All rights reserved.
           
           CheckFunctionExists.c
-          cl /c /Zi /W1 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_52afb.dir\\Debug\\\\" /Fd"cmTC_52afb.dir\\Debug\\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i1nt41\\CheckFunctionExists.c"
+          cl /c /Zi /W1 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d0eaa.dir\\Debug\\\\" /Fd"cmTC_d0eaa.dir\\Debug\\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yxxmuh\\CheckFunctionExists.c"
           
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i1nt41\\Debug\\cmTC_52afb.exe" /INCREMENTAL /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-i1nt41/Debug/cmTC_52afb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-i1nt41/Debug/cmTC_52afb.lib" /MACHINE:X86  /machine:X86 cmTC_52afb.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i1nt41\\cmTC_52afb.vcxproj]
-        Done Building Project "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i1nt41\\cmTC_52afb.vcxproj" (default targets) -- FAILED.
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yxxmuh\\Debug\\cmTC_d0eaa.exe" /INCREMENTAL /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-yxxmuh/Debug/cmTC_d0eaa.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-yxxmuh/Debug/cmTC_d0eaa.lib" /MACHINE:X86  /machine:X86 cmTC_d0eaa.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yxxmuh\\cmTC_d0eaa.vcxproj]
+        Done Building Project "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yxxmuh\\cmTC_d0eaa.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i1nt41\\cmTC_52afb.vcxproj" (default target) (1) ->
+        "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yxxmuh\\cmTC_d0eaa.vcxproj" (default target) (1) ->
         (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i1nt41\\cmTC_52afb.vcxproj]
+          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yxxmuh\\cmTC_d0eaa.vcxproj]
         
             0 Warning(s)
             1 Error(s)
@@ -276,8 +276,8 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-p3us8k"
-      binary: "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-p3us8k"
+      source: "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-0a416o"
+      binary: "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-0a416o"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -286,43 +286,43 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-p3us8k'
+        Change Dir: 'C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-0a416o'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" cmTC_faf34.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=15.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/MSBuild.exe" cmTC_b50b9.vcxproj /p:Configuration=Debug /p:Platform=Win32 /p:VisualStudioVersion=15.0 /v:n
         Microsoft (R) Build Engine version 15.9.21+g9802d43bc3 for .NET Framework
         Copyright (C) Microsoft Corporation. All rights reserved.
         
-        Build started 2/2/2025 6:15:43 PM.
-        Project "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p3us8k\\cmTC_faf34.vcxproj" on node 1 (default targets).
+        Build started 2/2/2025 7:50:35 PM.
+        Project "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0a416o\\cmTC_b50b9.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_faf34.dir\\Debug\\".
-          Creating directory "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p3us8k\\Debug\\".
-          Creating directory "cmTC_faf34.dir\\Debug\\cmTC_faf34.tlog\\".
+          Creating directory "cmTC_b50b9.dir\\Debug\\".
+          Creating directory "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0a416o\\Debug\\".
+          Creating directory "cmTC_b50b9.dir\\Debug\\cmTC_b50b9.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_faf34.dir\\Debug\\cmTC_faf34.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Creating "cmTC_b50b9.dir\\Debug\\cmTC_b50b9.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_faf34.dir\\Debug\\\\" /Fd"cmTC_faf34.dir\\Debug\\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p3us8k\\CheckFunctionExists.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x86\\CL.exe /c /Zi /W1 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b50b9.dir\\Debug\\\\" /Fd"cmTC_b50b9.dir\\Debug\\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0a416o\\CheckFunctionExists.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x86
           Copyright (C) Microsoft Corporation.  All rights reserved.
           
           CheckFunctionExists.c
-          cl /c /Zi /W1 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_faf34.dir\\Debug\\\\" /Fd"cmTC_faf34.dir\\Debug\\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p3us8k\\CheckFunctionExists.c"
+          cl /c /Zi /W1 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b50b9.dir\\Debug\\\\" /Fd"cmTC_b50b9.dir\\Debug\\vc141.pdb" /Gd /TC /analyze- /errorReport:queue "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0a416o\\CheckFunctionExists.c"
           
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p3us8k\\Debug\\cmTC_faf34.exe" /INCREMENTAL /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-p3us8k/Debug/cmTC_faf34.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-p3us8k/Debug/cmTC_faf34.lib" /MACHINE:X86  /machine:X86 cmTC_faf34.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p3us8k\\cmTC_faf34.vcxproj]
-        Done Building Project "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p3us8k\\cmTC_faf34.vcxproj" (default targets) -- FAILED.
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x86\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0a416o\\Debug\\cmTC_b50b9.exe" /INCREMENTAL /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-0a416o/Debug/cmTC_b50b9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-0a416o/Debug/cmTC_b50b9.lib" /MACHINE:X86  /machine:X86 cmTC_b50b9.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0a416o\\cmTC_b50b9.vcxproj]
+        Done Building Project "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0a416o\\cmTC_b50b9.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p3us8k\\cmTC_faf34.vcxproj" (default target) (1) ->
+        "C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0a416o\\cmTC_b50b9.vcxproj" (default target) (1) ->
         (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p3us8k\\cmTC_faf34.vcxproj]
+          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0a416o\\cmTC_b50b9.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:01.09
+        Time Elapsed 00:00:01.33
         
       exitCode: 1
 ...

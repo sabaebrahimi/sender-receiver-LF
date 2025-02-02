@@ -1,9 +1,9 @@
 #ifndef _bitgenerator_H
 #define _bitgenerator_H
 #ifndef _BITGENERATOR_H // necessary for arduino-cli, which automatically includes headers that are not used
-#ifndef TOP_LEVEL_PREAMBLE_1165973527_H
-#define TOP_LEVEL_PREAMBLE_1165973527_H
-/*Correspondence: Range: [(3, 4), (23, 36)) -> Range: [(0, 0), (20, 36)) (verbatim=true; src=c:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src\senderreceiver.lf)*/#include <stdlib.h>
+#ifndef TOP_LEVEL_PREAMBLE_940375901_H
+#define TOP_LEVEL_PREAMBLE_940375901_H
+/*Correspondence: Range: [(3, 4), (24, 32)) -> Range: [(0, 0), (21, 32)) (verbatim=true; src=c:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src\senderreceiver.lf)*/#include <stdlib.h>
 typedef enum {
     STATE_A = 0, STATE_B = 1,
     STATE_C = 2, STATE_D = 3,
@@ -24,6 +24,7 @@ void enqueue(queue_ss_t* queue, int value);
 int dequeue(queue_ss_t* queue);
 int get_front(queue_ss_t* queue);
 void deleteQueue(queue_ss_t* queue);
+int is_empty(queue_ss_t* queue);
 #endif
 #ifdef __cplusplus
 extern "C" {

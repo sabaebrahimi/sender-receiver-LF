@@ -1,8 +1,8 @@
 #ifndef _BITGENERATOR_H
 #define _BITGENERATOR_H
 #include "include/core/reactor.h"
-#ifndef TOP_LEVEL_PREAMBLE_1165973527_H
-#define TOP_LEVEL_PREAMBLE_1165973527_H
+#ifndef TOP_LEVEL_PREAMBLE_940375901_H
+#define TOP_LEVEL_PREAMBLE_940375901_H
 #include <stdlib.h>
 typedef enum {
     STATE_A = 0, STATE_B = 1,
@@ -24,6 +24,7 @@ void enqueue(queue_ss_t* queue, int value);
 int dequeue(queue_ss_t* queue);
 int get_front(queue_ss_t* queue);
 void deleteQueue(queue_ss_t* queue);
+int is_empty(queue_ss_t* queue);
 #endif
 typedef struct {
     token_type_t type;
@@ -41,10 +42,10 @@ typedef struct {
 } _bitgenerator_out_t;
 typedef struct {
     struct self_base_t base;
-#line 45 "c:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\_bitgenerator.h"
+#line 46 "c:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\_bitgenerator.h"
     #line 30 "/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src/senderreceiver.lf"
     int sent;
-#line 48 "c:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\_bitgenerator.h"
+#line 49 "c:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\_bitgenerator.h"
     _bitgenerator_out_t _lf_out;
     int _lf_out_width;
     reaction_t _lf__reaction_0;

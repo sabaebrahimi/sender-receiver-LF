@@ -22,7 +22,7 @@ preamble {=
     int dequeue(queue_ss_t* queue);
     int get_front(queue_ss_t* queue);
     void deleteQueue(queue_ss_t* queue);
-
+    int is_empty(queue_ss_t* queue);
 =}
 
 reactor BitGenerator {
@@ -55,8 +55,9 @@ reactor SenderModel {
     state m: int = 0
 
     state x: int = 0
+    state started: int = 0
 
-    timer t(0, 100ms)   
+    timer t(0, 100 ms)   
     state currState: ModelState = 0
     state queue: queue_ss_t*
 
@@ -72,93 +73,100 @@ reactor SenderModel {
 
     reaction(in) {=
         printf("Received input: %d\n", in->value);
-        if (in == 1) {
-            enqueue(queue, 1);
-            m = dequeue(queue);
+        if (in->value == 1) {
+            enqueue(self->queue, 1);
+            self->m = dequeue(self->queue);
+            self->started = 1;
         }
     =}
 
     reaction(t) -> up, down {=
         // Main state machine logic
-        switch(self->currentState) {
+        switch(self->currState) {
             case STATE_A:
-                /*if (self->x >= 4) {
-                    self->currentState = STATE_H;
-                } else */
-                if (self->x >= 2 && self->m == NULL) {
-                    lf_schedule(down, 0);
-                    self->currentState = STATE_B;
+                if (self->started == 1) {
+                    self->currState = STATE_B;
                     self->x = 0;
                 }
                 break;
                 
             case STATE_B:
-                if (self->x >= 2 && F(self->m) == 1) {
-                    lf_schedule(up, 0);
-                    deq(self->m);
-                    self->currentState = STATE_C;
+                if (self->x >= 2 && get_front(self->queue) == 1) {
+                    lf_set(up, 1);
+                    dequeue(self->queue);
+                    self->currState = STATE_C;
                     self->x = 0;
-                } else if (self->x >= 2 && F(self->m) == 0) {
-                    lf_schedule(up, 0);
-                    deq(self->m);
-                    self->currentState = STATE_D;
+                } else if (self->x >= 2 && get_front(self->queue) == 0) {
+                    lf_set(up, 1);
+                    dequeue(self->queue);
+                    self->currState = STATE_D;
                     self->x = 0;
                 }
                 break;
                 
             case STATE_C:
                 if (self->x >= 2) {
-                    lf_schedule(down, 0);
-                    self->x = 0;
-                } else if (self->x >= 4 && F(self->m) == 1) {
-                    lf_schedule(up, 0);
-                    deq(self->m);
+                    lf_set(down, 1);
                     self->x = 0;
                 }
                 break;
                 
             case STATE_D:
-                if (self->x >= 4 && F(self->m) == 0) {
-                    lf_schedule(up, 0);
-                    deq(self->m);
-                    self->currentState = STATE_E;
+                if (self->x >= 4 && get_front(self->queue) == 1) {
+                    lf_set(down, 1);
+                    dequeue(self->queue);
+                    self->currState = STATE_E;
                     self->x = 0;
-                } else if (self->x >= 4 && F(self->m) == 0) {
-                    lf_schedule(down, 0);
-                    deq(self->m);
-                    self->currentState = STATE_F;
+                } else if (self->x >= 4 && get_front(self->queue) == 0) {
+                    lf_set(down, 1);
+                    dequeue(self->queue);
+                    self->currState = STATE_F;
                     self->x = 0;
                 }
                 break;
                 
             case STATE_E:
-                if (self->x >= 2 && F(self->m) == 1) {
-                    lf_schedule(down, 0);
-                    deq(self->m);
-                    self->currentState = STATE_F;
+                if (self->x >= 4 && get_front(self->queue) == 1) {
+                    lf_set(up, 1);
+                    dequeue(self->queue);
+                    self->currState = STATE_C;
+                    self->x = 0;
+                } else if (self->x >= 4 && get_front(self->queue) == 0) {
+                    lf_set(up, 1);
+                    dequeue(self->queue);
+                    self->currState = STATE_D;
                     self->x = 0;
                 }
                 break;
                 
             case STATE_F:
                 if (self->x >= 2) {
-                    lf_schedule(up, 0);
-                    self->currentState = STATE_G;
+                    lf_set(up, 1);
+                    self->currState = STATE_G;
                     self->x = 0;
                 }
                 break;
                 
             case STATE_G:
-                if (self->x >= 2 && F(self->m) == 0) {
-                    lf_schedule(down, 0);
-                    deq(self->m);
+                if (self->x >= 2 && get_front(self->queue) == 0) {
+                    lf_set(down, 1);
+                    self->currState = STATE_F;
+                    dequeue(self->queue);
                     self->x = 0;
+                } else if (self->x >= 2 && get_front(self->queue) == 1) {
+                    lf_set(down, 1);
+                    self->currState = STATE_E;
+                    dequeue(self->queue);
+                    self->x = 0;
+                } else if (self->x >= 2 && is_empty(self->queue)) {
+                    lf_set(down, 1);
+                    self->currState = STATE_H;
                 }
                 break;
 
             case STATE_H:
-                if (self->x <= 4) {
-                    self->currentState = STATE_A;
+                if (self->x >= 4) {
+                    self->currState = STATE_A;
                 }
                 break;
         }
@@ -167,7 +175,11 @@ reactor SenderModel {
         self->x++;
     =}
 
-    
+    reaction(shutdown) {=
+        if (self->queue != NULL) {
+            deleteQueue(self->queue);
+        }
+    =}
 }
 
 
@@ -206,6 +218,10 @@ main reactor {
         void deleteQueue(queue_ss_t* queue) {
             free(queue->items);
             free(queue);
+        }
+
+        int is_empty(queue_ss_t* queue) {
+            return queue->front > queue->rear;
         }
     =}
     bitGenerator = new BitGenerator()
