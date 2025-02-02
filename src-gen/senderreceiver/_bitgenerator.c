@@ -8,12 +8,12 @@
 void _bitgeneratorreaction_function_0(void* instance_args) {
     _bitgenerator_self_t* self = (_bitgenerator_self_t*)instance_args; SUPPRESS_UNUSED_WARNING(self);
     _bitgenerator_out_t* out = &self->_lf_out;
-    #line 34 "/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src/senderreceiver.lf"
+    #line 40 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src/senderreceiver.lf"
     if (self->sent == 0) {
         lf_set(out, 1);
         self->sent = 1;
     }
-#line 17 "c:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\_bitgenerator.c"
+#line 17 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\_bitgenerator.c"
 }
 #include "include/api/reaction_macros_undef.h"
 _bitgenerator_self_t* new__bitgenerator() {

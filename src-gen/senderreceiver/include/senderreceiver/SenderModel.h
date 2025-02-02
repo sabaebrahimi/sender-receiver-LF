@@ -1,15 +1,21 @@
 #ifndef _sendermodel_H
 #define _sendermodel_H
 #ifndef _SENDERMODEL_H // necessary for arduino-cli, which automatically includes headers that are not used
-#ifndef TOP_LEVEL_PREAMBLE_940375901_H
-#define TOP_LEVEL_PREAMBLE_940375901_H
-/*Correspondence: Range: [(3, 4), (24, 32)) -> Range: [(0, 0), (21, 32)) (verbatim=true; src=c:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src\senderreceiver.lf)*/#include <stdlib.h>
+#ifndef TOP_LEVEL_PREAMBLE_2086853935_H
+#define TOP_LEVEL_PREAMBLE_2086853935_H
+/*Correspondence: Range: [(3, 4), (30, 32)) -> Range: [(0, 0), (27, 32)) (verbatim=true; src=c:\Users\Amin\Desktop\RT\project\sender-receiver-LF\sender-receiver-LF\src\senderreceiver.lf)*/#include <stdlib.h>
 typedef enum {
     STATE_A = 0, STATE_B = 1,
     STATE_C = 2, STATE_D = 3,
     STATE_E = 4, STATE_F = 5,
     STATE_G = 6, STATE_H = 7
-} ModelState;
+} SenderModelState;
+
+typedef enum {
+    STATE_IDLE  = 0,
+    STATE_LAST1 = 1,
+    STATE_LAST2 = 2
+} ReceiverModelState;
 
 // queue_ss_t structure for Enq operation
 typedef struct {
@@ -41,7 +47,8 @@ typedef struct sendermodel_self_t{
     int m;
     int x;
     int started;
-    ModelState currState;
+    interval_t step;
+    SenderModelState currState;
     queue_ss_t* queue;
     int end[0]; // placeholder; MSVC does not compile empty structs
 } sendermodel_self_t;
@@ -87,5 +94,22 @@ typedef struct {
     interval_t physical_time_of_arrival;
     #endif
 } sendermodel_down_t;
+typedef struct {
+    token_type_t type;
+    lf_token_t* token;
+    size_t length;
+    bool is_present;
+    lf_action_internal_t _base;
+    self_base_t* parent;
+    bool has_value;
+    int source_id;
+
+    #ifdef FEDERATED
+    #ifdef FEDERATED_DECENTRALIZED
+    tag_t intended_tag;
+    #endif
+    interval_t physical_time_of_arrival;
+    #endif
+} sendermodel_a_t;
 #endif
 #endif

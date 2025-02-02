@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/core
+# Install script for directory: C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/core
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,9 +32,3 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
-       "${CMAKE_INSTALL_MANIFEST_FILES}")
-if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/core/install_local_manifest.txt"
-     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
-endif()
