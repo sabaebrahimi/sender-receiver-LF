@@ -1,1 +1,1 @@
-C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/bin/senderreceiver.exe
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/bin/senderreceiver.exe

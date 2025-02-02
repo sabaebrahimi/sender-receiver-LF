@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\build\CMakeFiles\40b460eea2b7ce2874dc6f5b2e962705\INSTALL_force.rule">
+    <CustomBuild Include="C:\Users\Amin\Desktop\RT\project\sender-receiver-LF\sender-receiver-LF\src-gen\senderreceiver\build\CMakeFiles\abbf3332818433092b91a86f8635184b\INSTALL_force.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{AD70EB95-A142-338E-BB35-5B20A3883243}</UniqueIdentifier>
+      <UniqueIdentifier>{6E013518-1FD9-30E7-8CD8-4D031F31D4F4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

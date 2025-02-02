@@ -1,4 +1,4 @@
-target C {timeout : 3 sec}
+target C {timeout : 6 sec}
 // Preamble for shared definitions
 preamble {=
     #include <stdlib.h>
@@ -7,7 +7,13 @@ preamble {=
         STATE_C = 2, STATE_D = 3,
         STATE_E = 4, STATE_F = 5,
         STATE_G = 6, STATE_H = 7
-    } ModelState;
+    } SenderModelState;
+
+    typedef enum {
+        STATE_IDLE  = 0,
+        STATE_LAST1 = 1,
+        STATE_LAST2 = 2
+    } ReceiverModelState;
 
     // queue_ss_t structure for Enq operation
     typedef struct {
@@ -40,25 +46,22 @@ reactor BitGenerator {
 reactor SenderModel {
     // State definitions using enumeration
 
-    preamble {=
-         
-    =}
-
     input in: int
 
     output up: int
     output down: int
 
-    state sequence: int[] = {0, 0, 1, 1, 0, 1, 0, 0}
-    state length: int = 8
+    state sequence: int[] = {1, 0, 0, 1, 1, 0, 1, 0, 0}
+    state length: int = 9
 
     state m: int = 0
 
     state x: int = 0
     state started: int = 0
 
-    timer t(0, 100 ms)   
-    state currState: ModelState = 0
+    state step: time = 100 msec
+    logical action a
+    state currState: SenderModelState = 0
     state queue: queue_ss_t*
 
     reaction(startup) {=
@@ -71,103 +74,119 @@ reactor SenderModel {
         }
     =}
 
-    reaction(in) {=
+    reaction(in) -> a {=
         printf("Received input: %d\n", in->value);
-        if (in->value == 1) {
-            enqueue(self->queue, 1);
-            self->m = dequeue(self->queue);
-            self->started = 1;
+        if (self->currState == STATE_A && in->value == 1) {
+            printf("A -> B\n");
+            dequeue(self->queue);
+            self->currState = STATE_B;
+            self->x = 1;
+            lf_schedule(a, self->step);
         }
     =}
 
-    reaction(t) -> up, down {=
+    reaction(a) -> up, down, a {=
         // Main state machine logic
         switch(self->currState) {
-            case STATE_A:
-                if (self->started == 1) {
-                    self->currState = STATE_B;
-                    self->x = 0;
-                }
-                break;
-                
             case STATE_B:
                 if (self->x >= 2 && get_front(self->queue) == 1) {
                     lf_set(up, 1);
+                    printf("B -> C\n");
                     dequeue(self->queue);
                     self->currState = STATE_C;
                     self->x = 0;
                 } else if (self->x >= 2 && get_front(self->queue) == 0) {
                     lf_set(up, 1);
+                    printf("B -> D\n");
                     dequeue(self->queue);
                     self->currState = STATE_D;
                     self->x = 0;
                 }
+                lf_schedule(a, self->step);
                 break;
                 
             case STATE_C:
                 if (self->x >= 2) {
                     lf_set(down, 1);
+                    printf("C -> B\n");
+                    self->currState = STATE_B;
                     self->x = 0;
                 }
+                lf_schedule(a, self->step);
                 break;
                 
             case STATE_D:
                 if (self->x >= 4 && get_front(self->queue) == 1) {
                     lf_set(down, 1);
+                    printf("D -> E\n");
                     dequeue(self->queue);
                     self->currState = STATE_E;
                     self->x = 0;
                 } else if (self->x >= 4 && get_front(self->queue) == 0) {
                     lf_set(down, 1);
+                    printf("D -> F\n");
                     dequeue(self->queue);
                     self->currState = STATE_F;
                     self->x = 0;
                 }
+                lf_schedule(a, self->step);
                 break;
                 
             case STATE_E:
                 if (self->x >= 4 && get_front(self->queue) == 1) {
                     lf_set(up, 1);
+                    printf("E -> C\n");
                     dequeue(self->queue);
                     self->currState = STATE_C;
                     self->x = 0;
                 } else if (self->x >= 4 && get_front(self->queue) == 0) {
                     lf_set(up, 1);
+                    printf("E -> D\n");
                     dequeue(self->queue);
                     self->currState = STATE_D;
                     self->x = 0;
                 }
+                lf_schedule(a, self->step);
                 break;
                 
             case STATE_F:
                 if (self->x >= 2) {
                     lf_set(up, 1);
+                    printf("F -> G\n");
                     self->currState = STATE_G;
                     self->x = 0;
                 }
+                lf_schedule(a, self->step);
                 break;
                 
             case STATE_G:
                 if (self->x >= 2 && get_front(self->queue) == 0) {
                     lf_set(down, 1);
+                    printf("G -> F\n");
                     self->currState = STATE_F;
                     dequeue(self->queue);
                     self->x = 0;
                 } else if (self->x >= 2 && get_front(self->queue) == 1) {
                     lf_set(down, 1);
+                    printf("G -> E\n");
                     self->currState = STATE_E;
                     dequeue(self->queue);
                     self->x = 0;
                 } else if (self->x >= 2 && is_empty(self->queue)) {
                     lf_set(down, 1);
+                    printf("G -> H\n");
                     self->currState = STATE_H;
                 }
+                lf_schedule(a, self->step);
                 break;
 
             case STATE_H:
                 if (self->x >= 4) {
+                    printf("H -> A\n");
                     self->currState = STATE_A;
                 }
+                else
+                    lf_schedule(a, self->step);
                 break;
         }
         
@@ -180,6 +199,10 @@ reactor SenderModel {
             deleteQueue(self->queue);
         }
     =}
+}
+
+reactor ReceiverModel{
+
 }
 
 

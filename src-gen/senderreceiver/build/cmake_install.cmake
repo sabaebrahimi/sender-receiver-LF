@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver
+# Install script for directory: C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,27 +34,21 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/core/cmake_install.cmake")
+  include("C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/core/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE MESSAGE_NEVER FILES "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/Debug/senderreceiver.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE MESSAGE_NEVER FILES "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/Debug/senderreceiver.exe")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE MESSAGE_NEVER FILES "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/Release/senderreceiver.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE MESSAGE_NEVER FILES "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/Release/senderreceiver.exe")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE MESSAGE_NEVER FILES "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/MinSizeRel/senderreceiver.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE MESSAGE_NEVER FILES "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/MinSizeRel/senderreceiver.exe")
   elseif(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE MESSAGE_NEVER FILES "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/RelWithDebInfo/senderreceiver.exe")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE MESSAGE_NEVER FILES "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/RelWithDebInfo/senderreceiver.exe")
   endif()
 endif()
 
-string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
-       "${CMAKE_INSTALL_MANIFEST_FILES}")
-if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/install_local_manifest.txt"
-     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
-endif()
 if(CMAKE_INSTALL_COMPONENT)
   if(CMAKE_INSTALL_COMPONENT MATCHES "^[a-zA-Z0-9_.+-]+$")
     set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
@@ -68,6 +62,8 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/${CMAKE_INSTALL_MANIFEST}"
+  string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+  file(WRITE "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

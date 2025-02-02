@@ -2,19 +2,13 @@
 #include "low_level_platform/api/low_level_platform.h"
 #include "include/senderreceiver\SenderModel.h"
 #include "_sendermodel.h"
-// *********** From the preamble, verbatim:
-#line 43 "/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src/senderreceiver.lf"
-
-#line 9 "c:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\_sendermodel.c"
-
-// *********** End of preamble.
 // ***** Start of method declarations.
 // ***** End of method declarations.
 #include "include/api/reaction_macros.h"
 void _sendermodelreaction_function_0(void* instance_args) {
     _sendermodel_self_t* self = (_sendermodel_self_t*)instance_args; SUPPRESS_UNUSED_WARNING(self);
     
-    #line 65 "/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src/senderreceiver.lf"
+    #line 68 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src/senderreceiver.lf"
     printf("SenderModel started\n");
     self->currState = STATE_A;
     self->queue = createQueue(10);
@@ -22,7 +16,7 @@ void _sendermodelreaction_function_0(void* instance_args) {
     for (int i = 0; i < self->length; i++) {
         enqueue(self->queue, self->sequence[i]);
     }
-#line 26 "c:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\_sendermodel.c"
+#line 20 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\_sendermodel.c"
 }
 #include "include/api/reaction_macros_undef.h"
 #include "include/api/reaction_macros.h"
@@ -30,130 +24,158 @@ void _sendermodelreaction_function_1(void* instance_args) {
     _sendermodel_self_t* self = (_sendermodel_self_t*)instance_args; SUPPRESS_UNUSED_WARNING(self);
     _sendermodel_in_t* in = self->_lf_in;
     int in_width = self->_lf_in_width; SUPPRESS_UNUSED_WARNING(in_width);
-    #line 75 "/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src/senderreceiver.lf"
+    _sendermodel_a_t* a = &self->_lf_a;
+    #line 78 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src/senderreceiver.lf"
     printf("Received input: %d\n", in->value);
-    if (in->value == 1) {
-        enqueue(self->queue, 1);
-        self->m = dequeue(self->queue);
-        self->started = 1;
+    if (self->currState == STATE_A && in->value == 1) {
+        printf("A -> B\n");
+        dequeue(self->queue);
+        self->currState = STATE_B;
+        self->x = 1;
+        lf_schedule(a, self->step);
     }
-#line 41 "c:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\_sendermodel.c"
+#line 38 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\_sendermodel.c"
 }
 #include "include/api/reaction_macros_undef.h"
 #include "include/api/reaction_macros.h"
 void _sendermodelreaction_function_2(void* instance_args) {
     _sendermodel_self_t* self = (_sendermodel_self_t*)instance_args; SUPPRESS_UNUSED_WARNING(self);
+    lf_critical_section_enter(self->base.environment);
+    // Expose the action struct as a local variable whose name matches the action name.
+    _sendermodel_a_t* a = &self->_lf_a;
+    // Set the fields of the action struct to match the current trigger.
+    a->is_present = (bool)self->_lf__a.status;
+    a->has_value = ((self->_lf__a.tmplt.token) != NULL && (self->_lf__a.tmplt.token)->value != NULL);
+    _lf_replace_template_token((token_template_t*)a, (self->_lf__a.tmplt.token));
+    lf_critical_section_exit(self->base.environment);
     _sendermodel_up_t* up = &self->_lf_up;
     _sendermodel_down_t* down = &self->_lf_down;
-    #line 84 "/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src/senderreceiver.lf"
+    #line 89 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src/senderreceiver.lf"
     // Main state machine logic
     switch(self->currState) {
-        case STATE_A:
-            if (self->started == 1) {
-                self->currState = STATE_B;
-                self->x = 0;
-            }
-            break;
-    
         case STATE_B:
             if (self->x >= 2 && get_front(self->queue) == 1) {
                 lf_set(up, 1);
+                printf("B -> C\n");
                 dequeue(self->queue);
                 self->currState = STATE_C;
                 self->x = 0;
             } else if (self->x >= 2 && get_front(self->queue) == 0) {
                 lf_set(up, 1);
+                printf("B -> D\n");
                 dequeue(self->queue);
                 self->currState = STATE_D;
                 self->x = 0;
             }
+            lf_schedule(a, self->step);
             break;
     
         case STATE_C:
             if (self->x >= 2) {
                 lf_set(down, 1);
+                printf("C -> B\n");
+                self->currState = STATE_B;
                 self->x = 0;
             }
+            lf_schedule(a, self->step);
             break;
     
         case STATE_D:
             if (self->x >= 4 && get_front(self->queue) == 1) {
                 lf_set(down, 1);
+                printf("D -> E\n");
                 dequeue(self->queue);
                 self->currState = STATE_E;
                 self->x = 0;
             } else if (self->x >= 4 && get_front(self->queue) == 0) {
                 lf_set(down, 1);
+                printf("D -> F\n");
                 dequeue(self->queue);
                 self->currState = STATE_F;
                 self->x = 0;
             }
+            lf_schedule(a, self->step);
             break;
     
         case STATE_E:
             if (self->x >= 4 && get_front(self->queue) == 1) {
                 lf_set(up, 1);
+                printf("E -> C\n");
                 dequeue(self->queue);
                 self->currState = STATE_C;
                 self->x = 0;
             } else if (self->x >= 4 && get_front(self->queue) == 0) {
                 lf_set(up, 1);
+                printf("E -> D\n");
                 dequeue(self->queue);
                 self->currState = STATE_D;
                 self->x = 0;
             }
+            lf_schedule(a, self->step);
             break;
     
         case STATE_F:
             if (self->x >= 2) {
                 lf_set(up, 1);
+                printf("F -> G\n");
                 self->currState = STATE_G;
                 self->x = 0;
             }
+            lf_schedule(a, self->step);
             break;
     
         case STATE_G:
             if (self->x >= 2 && get_front(self->queue) == 0) {
                 lf_set(down, 1);
+                printf("G -> F\n");
                 self->currState = STATE_F;
                 dequeue(self->queue);
                 self->x = 0;
             } else if (self->x >= 2 && get_front(self->queue) == 1) {
                 lf_set(down, 1);
+                printf("G -> E\n");
                 self->currState = STATE_E;
                 dequeue(self->queue);
                 self->x = 0;
             } else if (self->x >= 2 && is_empty(self->queue)) {
                 lf_set(down, 1);
+                printf("G -> H\n");
                 self->currState = STATE_H;
             }
+            lf_schedule(a, self->step);
             break;
     
         case STATE_H:
             if (self->x >= 4) {
+                printf("H -> A\n");
                 self->currState = STATE_A;
             }
+            else
+                lf_schedule(a, self->step);
             break;
     }
     
     // Increment time
     self->x++;
-#line 142 "c:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\_sendermodel.c"
+#line 161 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\_sendermodel.c"
 }
 #include "include/api/reaction_macros_undef.h"
 #include "include/api/reaction_macros.h"
 void _sendermodelreaction_function_3(void* instance_args) {
     _sendermodel_self_t* self = (_sendermodel_self_t*)instance_args; SUPPRESS_UNUSED_WARNING(self);
     
-    #line 179 "/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src/senderreceiver.lf"
+    #line 198 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src/senderreceiver.lf"
     if (self->queue != NULL) {
         deleteQueue(self->queue);
     }
-#line 153 "c:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\_sendermodel.c"
+#line 172 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\_sendermodel.c"
 }
 #include "include/api/reaction_macros_undef.h"
 _sendermodel_self_t* new__sendermodel() {
     _sendermodel_self_t* self = (_sendermodel_self_t*)lf_new_reactor(sizeof(_sendermodel_self_t));
+    self->_lf_a._base.trigger = &self->_lf__a;
+    self->_lf_a.parent = (self_base_t*)self;
+    self->_lf_a.source_id = -1;
     // Set input by default to an always absent default input.
     self->_lf_in = &self->_lf_default__in;
     // Set the default source reactor pointer
@@ -186,20 +208,6 @@ _sendermodel_self_t* new__sendermodel() {
     self->_lf__reaction_3.STP_handler = NULL;
     self->_lf__reaction_3.name = "?";
     self->_lf__reaction_3.mode = NULL;
-    self->_lf__t.last_tag = NEVER_TAG;
-    #ifdef FEDERATED_DECENTRALIZED
-    self->_lf__t.intended_tag = (tag_t) { .time = NEVER, .microstep = 0u};
-    #endif // FEDERATED_DECENTRALIZED
-    self->_lf__t_reactions[0] = &self->_lf__reaction_2;
-    self->_lf__t.reactions = &self->_lf__t_reactions[0];
-    self->_lf__t.number_of_reactions = 1;
-    #ifdef FEDERATED
-    self->_lf__t.physical_time_of_arrival = NEVER;
-    #endif // FEDERATED
-    self->_lf__t.is_timer = true;
-    #ifdef FEDERATED_DECENTRALIZED
-    self->_lf__t.intended_tag = (tag_t) { .time = NEVER, .microstep = 0u};
-    #endif // FEDERATED_DECENTRALIZED
     #ifdef FEDERATED_DECENTRALIZED
     self->_lf__startup.intended_tag = (tag_t) { .time = NEVER, .microstep = 0u};
     #endif // FEDERATED_DECENTRALIZED
@@ -216,6 +224,20 @@ _sendermodel_self_t* new__sendermodel() {
     self->_lf__shutdown.reactions = &self->_lf__shutdown_reactions[0];
     self->_lf__shutdown.number_of_reactions = 1;
     self->_lf__shutdown.is_timer = false;
+    self->_lf__a.last_tag = NEVER_TAG;
+    #ifdef FEDERATED_DECENTRALIZED
+    self->_lf__a.intended_tag = (tag_t) { .time = NEVER, .microstep = 0u};
+    #endif // FEDERATED_DECENTRALIZED
+    self->_lf__a_reactions[0] = &self->_lf__reaction_2;
+    self->_lf__a.reactions = &self->_lf__a_reactions[0];
+    self->_lf__a.number_of_reactions = 1;
+    #ifdef FEDERATED
+    self->_lf__a.physical_time_of_arrival = NEVER;
+    #endif // FEDERATED
+    self->_lf__a.is_physical = false;
+    
+    self->_lf__a.tmplt.type.element_size = 0;
+    self->_lf_a.type.element_size = 0;
     self->_lf__in.last_tag = NEVER_TAG;
     #ifdef FEDERATED_DECENTRALIZED
     self->_lf__in.intended_tag = (tag_t) { .time = NEVER, .microstep = 0u};

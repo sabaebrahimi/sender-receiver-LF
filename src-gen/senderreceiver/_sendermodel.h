@@ -1,15 +1,21 @@
 #ifndef _SENDERMODEL_H
 #define _SENDERMODEL_H
 #include "include/core/reactor.h"
-#ifndef TOP_LEVEL_PREAMBLE_940375901_H
-#define TOP_LEVEL_PREAMBLE_940375901_H
+#ifndef TOP_LEVEL_PREAMBLE_2086853935_H
+#define TOP_LEVEL_PREAMBLE_2086853935_H
 #include <stdlib.h>
 typedef enum {
     STATE_A = 0, STATE_B = 1,
     STATE_C = 2, STATE_D = 3,
     STATE_E = 4, STATE_F = 5,
     STATE_G = 6, STATE_H = 7
-} ModelState;
+} SenderModelState;
+
+typedef enum {
+    STATE_IDLE  = 0,
+    STATE_LAST1 = 1,
+    STATE_LAST2 = 2
+} ReceiverModelState;
 
 // queue_ss_t structure for Enq operation
 typedef struct {
@@ -69,23 +75,43 @@ typedef struct {
     #endif
 } _sendermodel_down_t;
 typedef struct {
+    token_type_t type;
+    lf_token_t* token;
+    size_t length;
+    bool is_present;
+    lf_action_internal_t _base;
+    self_base_t* parent;
+    bool has_value;
+    int source_id;
+
+    #ifdef FEDERATED
+    #ifdef FEDERATED_DECENTRALIZED
+    tag_t intended_tag;
+    #endif
+    interval_t physical_time_of_arrival;
+    #endif
+} _sendermodel_a_t;
+typedef struct {
     struct self_base_t base;
-#line 74 "c:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\_sendermodel.h"
-    #line 52 "/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src/senderreceiver.lf"
+#line 97 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\_sendermodel.h"
+    #line 54 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src/senderreceiver.lf"
     int* sequence;
-    #line 53 "/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src/senderreceiver.lf"
+    #line 55 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src/senderreceiver.lf"
     int length;
-    #line 55 "/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src/senderreceiver.lf"
+    #line 57 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src/senderreceiver.lf"
     int m;
-    #line 57 "/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src/senderreceiver.lf"
+    #line 59 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src/senderreceiver.lf"
     int x;
-    #line 58 "/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src/senderreceiver.lf"
+    #line 60 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src/senderreceiver.lf"
     int started;
-    #line 61 "/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src/senderreceiver.lf"
-    ModelState currState;
-    #line 62 "/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src/senderreceiver.lf"
+    #line 62 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src/senderreceiver.lf"
+    interval_t step;
+    #line 64 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src/senderreceiver.lf"
+    SenderModelState currState;
+    #line 65 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src/senderreceiver.lf"
     queue_ss_t* queue;
-#line 89 "c:\\Users\\SabaEbrahimi\\workspace\\EmbeddedMaster\\final_project\\project2\\src-gen\\senderreceiver\\_sendermodel.h"
+#line 114 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\_sendermodel.h"
+    _sendermodel_a_t _lf_a;
     _sendermodel_in_t* _lf_in;
     // width of -2 indicates that it is not a multiport.
     int _lf_in_width;
@@ -99,12 +125,12 @@ typedef struct {
     reaction_t _lf__reaction_1;
     reaction_t _lf__reaction_2;
     reaction_t _lf__reaction_3;
-    trigger_t _lf__t;
-    reaction_t* _lf__t_reactions[1];
     trigger_t _lf__startup;
     reaction_t* _lf__startup_reactions[1];
     trigger_t _lf__shutdown;
     reaction_t* _lf__shutdown_reactions[1];
+    trigger_t _lf__a;
+    reaction_t* _lf__a_reactions[1];
     trigger_t _lf__in;
     reaction_t* _lf__in_reactions[1];
     #ifdef FEDERATED
