@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\tag.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\clock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\port.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\mixed_radix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\reactor_common.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\lf_token.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\environment.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\threaded\reactor_threaded.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\threaded\scheduler_adaptive.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\threaded\scheduler_GEDF_NP.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\threaded\scheduler_NP.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\threaded\scheduler_sync_tag_advance.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\threaded\scheduler_instance.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\threaded\watchdog.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\utils\vector.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\utils\pqueue_base.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\utils\pqueue_tag.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\utils\pqueue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\utils\util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\utils\lf_semaphore.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\utils\hashset\hashset.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\utils\hashset\hashset_itr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\platform\impl\platform.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\SabaEbrahimi\workspace\EmbeddedMaster\final_project\project2\src-gen\senderreceiver\core\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{FD67859C-96D1-3D52-AFB0-222D7D9B5D29}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

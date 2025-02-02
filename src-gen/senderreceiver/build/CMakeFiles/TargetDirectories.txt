@@ -1,0 +1,8 @@
+C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/senderreceiver.dir
+C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/INSTALL.dir
+C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/core/CMakeFiles/reactor-c.dir
+C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/core/CMakeFiles/lf-low-level-platform-impl.dir
+C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/core/CMakeFiles/lf-platform-impl.dir
+C:/Users/SabaEbrahimi/workspace/EmbeddedMaster/final_project/project2/src-gen/senderreceiver/build/core/CMakeFiles/INSTALL.dir

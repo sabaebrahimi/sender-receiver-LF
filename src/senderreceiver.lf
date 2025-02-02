@@ -1,0 +1,215 @@
+target C {timeout : 3 sec}
+// Preamble for shared definitions
+preamble {=
+    #include <stdlib.h>
+    typedef enum {
+        STATE_A = 0, STATE_B = 1,
+        STATE_C = 2, STATE_D = 3,
+        STATE_E = 4, STATE_F = 5,
+        STATE_G = 6, STATE_H = 7
+    } ModelState;
+
+    // queue_ss_t structure for Enq operation
+    typedef struct {
+        int* items;
+        int front;
+        int rear;
+        int capacity;
+    } queue_ss_t;
+
+    queue_ss_t* createQueue(int capacity);
+    void enqueue(queue_ss_t* queue, int value);
+    int dequeue(queue_ss_t* queue);
+    int get_front(queue_ss_t* queue);
+    void deleteQueue(queue_ss_t* queue);
+
+=}
+
+reactor BitGenerator {
+    timer inputTimer(0, 1 sec)
+    state sent: int = 0
+    output out: int
+
+    reaction(inputTimer) -> out {=
+        if (self->sent == 0) {
+            lf_set(out, 1);
+            self->sent = 1;
+        }
+    =}
+}
+reactor SenderModel {
+    // State definitions using enumeration
+
+    preamble {=
+         
+    =}
+
+    input in: int
+
+    output up: int
+    output down: int
+
+    state sequence: int[] = {0, 0, 1, 1, 0, 1, 0, 0}
+    state length: int = 8
+
+    state m: int = 0
+
+    state x: int = 0
+
+    timer t(0, 100ms)   
+    state currState: ModelState = 0
+    state queue: queue_ss_t*
+
+    reaction(startup) {=
+        printf("SenderModel started\n");
+        self->currState = STATE_A;
+        self->queue = createQueue(10);
+
+        for (int i = 0; i < self->length; i++) {
+            enqueue(self->queue, self->sequence[i]);
+        }
+    =}
+
+    reaction(in) {=
+        printf("Received input: %d\n", in->value);
+        if (in == 1) {
+            enqueue(queue, 1);
+            m = dequeue(queue);
+        }
+    =}
+
+    reaction(t) -> up, down {=
+        // Main state machine logic
+        switch(self->currentState) {
+            case STATE_A:
+                /*if (self->x >= 4) {
+                    self->currentState = STATE_H;
+                } else */
+                if (self->x >= 2 && self->m == NULL) {
+                    lf_schedule(down, 0);
+                    self->currentState = STATE_B;
+                    self->x = 0;
+                }
+                break;
+                
+            case STATE_B:
+                if (self->x >= 2 && F(self->m) == 1) {
+                    lf_schedule(up, 0);
+                    deq(self->m);
+                    self->currentState = STATE_C;
+                    self->x = 0;
+                } else if (self->x >= 2 && F(self->m) == 0) {
+                    lf_schedule(up, 0);
+                    deq(self->m);
+                    self->currentState = STATE_D;
+                    self->x = 0;
+                }
+                break;
+                
+            case STATE_C:
+                if (self->x >= 2) {
+                    lf_schedule(down, 0);
+                    self->x = 0;
+                } else if (self->x >= 4 && F(self->m) == 1) {
+                    lf_schedule(up, 0);
+                    deq(self->m);
+                    self->x = 0;
+                }
+                break;
+                
+            case STATE_D:
+                if (self->x >= 4 && F(self->m) == 0) {
+                    lf_schedule(up, 0);
+                    deq(self->m);
+                    self->currentState = STATE_E;
+                    self->x = 0;
+                } else if (self->x >= 4 && F(self->m) == 0) {
+                    lf_schedule(down, 0);
+                    deq(self->m);
+                    self->currentState = STATE_F;
+                    self->x = 0;
+                }
+                break;
+                
+            case STATE_E:
+                if (self->x >= 2 && F(self->m) == 1) {
+                    lf_schedule(down, 0);
+                    deq(self->m);
+                    self->currentState = STATE_F;
+                    self->x = 0;
+                }
+                break;
+                
+            case STATE_F:
+                if (self->x >= 2) {
+                    lf_schedule(up, 0);
+                    self->currentState = STATE_G;
+                    self->x = 0;
+                }
+                break;
+                
+            case STATE_G:
+                if (self->x >= 2 && F(self->m) == 0) {
+                    lf_schedule(down, 0);
+                    deq(self->m);
+                    self->x = 0;
+                }
+                break;
+
+            case STATE_H:
+                if (self->x <= 4) {
+                    self->currentState = STATE_A;
+                }
+                break;
+        }
+        
+        // Increment time
+        self->x++;
+    =}
+
+    
+}
+
+
+main reactor {
+    preamble {=
+        // queue_ss_t operations
+        queue_ss_t* createQueue(int capacity) {
+            queue_ss_t* queue = (queue_ss_t*)malloc(sizeof(queue_ss_t));
+            queue->items = (int*)malloc(capacity * sizeof(int));
+            queue->front = 0;
+            queue->rear = -1;
+            queue->capacity = capacity;
+            return queue;
+        }
+        
+        void enqueue(queue_ss_t* queue, int value) {
+            if (queue->rear < queue->capacity - 1) {
+                queue->items[++queue->rear] = value;
+            }
+        }
+
+        int dequeue(queue_ss_t* queue) {
+            if (queue->front <= queue->rear) {
+                return queue->items[queue->front++];
+            }
+            return -1;
+        }
+
+        int get_front(queue_ss_t* queue) {
+            if (queue->front <= queue->rear) {
+                return queue->items[queue->front];
+            }
+            return -1;
+        }
+        
+        void deleteQueue(queue_ss_t* queue) {
+            free(queue->items);
+            free(queue);
+        }
+    =}
+    bitGenerator = new BitGenerator()
+    sender = new SenderModel()
+
+    bitGenerator.out -> sender.in
+}
