@@ -4,8 +4,8 @@
 #include "_sendermodel.h"
 #include "_bitgenerator.h"
 #include "_receivermodel.h"
-#ifndef TOP_LEVEL_PREAMBLE_1432929075_H
-#define TOP_LEVEL_PREAMBLE_1432929075_H
+#ifndef TOP_LEVEL_PREAMBLE_448765163_H
+#define TOP_LEVEL_PREAMBLE_448765163_H
 #include <stdlib.h>
 typedef enum {
     STATE_A = 0, STATE_B = 1,

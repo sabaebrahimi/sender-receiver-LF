@@ -15,11 +15,7 @@ int lf_reactor_c_main(int argc, const char* argv[]);
 int main(int argc, const char* argv[]) {
     return lf_reactor_c_main(argc, argv);
 }
-const char* _lf_default_argv[] = { "dummy", "-o", "4", "sec" };
-void lf_set_default_command_line_options() {
-        default_argc = 4;
-        default_argv = _lf_default_argv;
-}
+void lf_set_default_command_line_options() {}
 #include "_bitgenerator.h"
 #include "_sendermodel.h"
 #include "_receivermodel.h"
@@ -79,7 +75,7 @@ void _lf_initialize_trigger_objects() {
         } // End scoping.
         // Initiaizing timer senderreceiver.bitGenerator.inputTimer.
         senderreceiver_bitgenerator_self[0]->_lf__inputTimer.offset = 0;
-        senderreceiver_bitgenerator_self[0]->_lf__inputTimer.period = SEC(1);
+        senderreceiver_bitgenerator_self[0]->_lf__inputTimer.period = SEC(20);
         // Associate timer with the environment of its parent
         envs[senderreceiver_main].timer_triggers[timer_triggers_count[senderreceiver_main]++] = &senderreceiver_bitgenerator_self[0]->_lf__inputTimer;
         senderreceiver_bitgenerator_self[0]->_lf__inputTimer.mode = NULL;
@@ -113,7 +109,11 @@ void _lf_initialize_trigger_objects() {
             static int _initial = 0;
             senderreceiver_sender_self[0]->x = _initial;
         } // End scoping.
-        senderreceiver_sender_self[0]->step = MSEC(100);
+        { // For scoping
+            static int _initial = 100;
+            senderreceiver_sender_self[0]->drift = _initial;
+        } // End scoping.
+        senderreceiver_sender_self[0]->step = MSEC(1);
         { // For scoping
             static SenderModelState _initial = 0;
             senderreceiver_sender_self[0]->currState = _initial;
@@ -147,7 +147,11 @@ void _lf_initialize_trigger_objects() {
             static int _initial = 0;
             senderreceiver_receiver_self[0]->y = _initial;
         } // End scoping.
-        senderreceiver_receiver_self[0]->step = MSEC(100);
+        { // For scoping
+            static int _initial = 100;
+            senderreceiver_receiver_self[0]->drift = _initial;
+        } // End scoping.
+        senderreceiver_receiver_self[0]->step = MSEC(1);
         { // For scoping
             static ReceiverModelState _initial = 0;
             senderreceiver_receiver_self[0]->currState = _initial;

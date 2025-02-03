@@ -1,8 +1,8 @@
 #ifndef _bitgenerator_H
 #define _bitgenerator_H
 #ifndef _BITGENERATOR_H // necessary for arduino-cli, which automatically includes headers that are not used
-#ifndef TOP_LEVEL_PREAMBLE_1432929075_H
-#define TOP_LEVEL_PREAMBLE_1432929075_H
+#ifndef TOP_LEVEL_PREAMBLE_448765163_H
+#define TOP_LEVEL_PREAMBLE_448765163_H
 /*Correspondence: Range: [(3, 4), (31, 56)) -> Range: [(0, 0), (28, 56)) (verbatim=true; src=c:\Users\Amin\Desktop\RT\project\sender-receiver-LF\src\senderreceiver.lf)*/#include <stdlib.h>
 typedef enum {
     STATE_A = 0, STATE_B = 1,

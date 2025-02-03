@@ -1,4 +1,4 @@
-target C {timeout : 4 sec}
+target C
 // Preamble for shared definitions
 preamble {=
     #include <stdlib.h>
@@ -33,7 +33,7 @@ preamble {=
 =}
 
 reactor BitGenerator {
-    timer inputTimer(0, 1 sec)
+    timer inputTimer(0, 20 sec)
     state sent: int = 0
     output out: int
 
@@ -46,7 +46,6 @@ reactor BitGenerator {
 }
 reactor SenderModel {
     // State definitions using enumeration
-
     input in: int
 
     output up: int
@@ -56,8 +55,9 @@ reactor SenderModel {
     state length: int = 9
 
     state x: int = 0
+    state drift: int = 100
 
-    state step: time = 100 msec
+    state step: time = 1 msec
     logical action a
     state currState: SenderModelState = 0
     state queue: queue_ss_t*
@@ -88,13 +88,15 @@ reactor SenderModel {
         // printf("x: %d\n", self->x);
         switch(self->currState) {
             case STATE_B:
-                if (self->x >= 2 && get_front(self->queue) == 1) {
+                if (self->x >= 2000 - self->drift 
+                        && get_front(self->queue) == 1) {
                     lf_set(up, 1);
                     printf("Sender State: B -> C\n");
                     dequeue(self->queue);
                     self->currState = STATE_C;
                     self->x = 0;
-                } else if (self->x >= 2 && get_front(self->queue) == 0) {
+                } else if (self->x >= 2000 - self->drift
+                        && get_front(self->queue) == 0) {
                     lf_set(up, 1);
                     printf("Sender State: B -> D\n");
                     dequeue(self->queue);
@@ -105,7 +107,7 @@ reactor SenderModel {
                 break;
                 
             case STATE_C:
-                if (self->x >= 2) {
+                if (self->x >= 2000 - self->drift) {
                     lf_set(down, 1);
                     printf("Sender State: C -> B\n");
                     self->currState = STATE_B;
@@ -115,13 +117,15 @@ reactor SenderModel {
                 break;
                 
             case STATE_D:
-                if (self->x >= 4 && get_front(self->queue) == 1) {
+                if (self->x >= 4000 - self->drift 
+                        && get_front(self->queue) == 1) {
                     lf_set(down, 1);
                     printf("Sender State: D -> E\n");
                     dequeue(self->queue);
                     self->currState = STATE_E;
                     self->x = 0;
-                } else if (self->x >= 4 && get_front(self->queue) == 0) {
+                } else if (self->x >= 4000 - self->drift 
+                        && get_front(self->queue) == 0) {
                     lf_set(down, 1);
                     printf("Sender State: D -> F\n");
                     dequeue(self->queue);
@@ -132,13 +136,15 @@ reactor SenderModel {
                 break;
                 
             case STATE_E:
-                if (self->x >= 4 && get_front(self->queue) == 1) {
+                if (self->x >= 4000 - self->drift 
+                        && get_front(self->queue) == 1) {
                     lf_set(up, 1);
                     printf("Sender State: E -> C\n");
                     dequeue(self->queue);
                     self->currState = STATE_C;
                     self->x = 0;
-                } else if (self->x >= 4 && get_front(self->queue) == 0) {
+                } else if (self->x >= 4000 - self->drift 
+                        && get_front(self->queue) == 0) {
                     lf_set(up, 1);
                     printf("Sender State: E -> D\n");
                     dequeue(self->queue);
@@ -149,7 +155,7 @@ reactor SenderModel {
                 break;
                 
             case STATE_F:
-                if (self->x >= 2) {
+                if (self->x >= 2000 - self->drift) {
                     lf_set(up, 1);
                     printf("Sender State: F -> G\n");
                     self->currState = STATE_G;
@@ -159,19 +165,22 @@ reactor SenderModel {
                 break;
                 
             case STATE_G:
-                if (self->x >= 2 && get_front(self->queue) == 0) {
+                if (self->x >= 2000 - self->drift 
+                        && get_front(self->queue) == 0) {
                     lf_set(down, 1);
                     printf("Sender State: G -> F\n");
                     self->currState = STATE_F;
                     dequeue(self->queue);
                     self->x = 0;
-                } else if (self->x >= 2 && get_front(self->queue) == 1) {
+                } else if (self->x >= 2000 - self->drift 
+                        && get_front(self->queue) == 1) {
                     lf_set(down, 1);
                     printf("Sender State: G -> E\n");
                     self->currState = STATE_E;
                     dequeue(self->queue);
                     self->x = 0;
-                } else if (self->x >= 2 && is_empty(self->queue)) {
+                } else if (self->x >= 2000 - self->drift 
+                        && is_empty(self->queue)) {
                     lf_set(down, 1);
                     printf("Sender State: G -> H\n");
                     self->currState = STATE_H;
@@ -180,7 +189,7 @@ reactor SenderModel {
                 break;
 
             case STATE_H:
-                if (self->x >= 4) {
+                if (self->x >= 4000 - self->drift) {
                     printf("Sender State: H -> A\n");
                     self->currState = STATE_A;
                 }
@@ -205,8 +214,9 @@ reactor ReceiverModel{
 
     input up: int
     state y: int = 0
+    state drift: int = 100
 
-    state step: time = 100 msec
+    state step: time = 1 msec
     logical action a
     state currState: ReceiverModelState = 0
     state queue: queue_ss_t*
@@ -230,20 +240,23 @@ reactor ReceiverModel{
                 break;
 
             case STATE_LAST1:
-                if (up->is_present && self->y >= 3 && self->y <= 5){
+                if (up->is_present && self->y >= 3000 - self->drift 
+                            && self->y <= 5000 + self->drift){
                     self->y = 0;
                     enqueue(self->queue, 1);
                     printf("Receiver State: LAST1 -> LAST1\n");
                     // printQueue(self->queue);
                 }
-                else if (up->is_present && self->y >= 5 && self->y <= 7){
+                else if (up->is_present && self->y >= 5000 - self->drift 
+                            && self->y <= 7000 + self->drift){
                     self->y = 0;
                     enqueue(self->queue, 0);
                     printf("Receiver State: LAST1 -> LAST0\n");
                     // printQueue(self->queue);
                     self->currState = STATE_LAST0;
                 }
-                else if (up->is_present && self->y >= 7 && self->y <= 9){
+                else if (up->is_present && self->y >= 7000 - self->drift 
+                            && self->y <= 9000 + self->drift){
                     self->y = 0;
                     enqueue(self->queue, 0);
                     enqueue(self->queue, 1);
@@ -253,13 +266,15 @@ reactor ReceiverModel{
                 break;
             
             case STATE_LAST0:
-            if (up->is_present && self->y >= 3 && self->y <= 5){
+            if (up->is_present && self->y >= 3000 - self->drift 
+                            && self->y <= 5000 + self->drift){
                     self->y = 0;
                     enqueue(self->queue, 0);
                     printf("Receiver State: LAST0 -> LAST0\n");
                     // printQueue(self->queue);
                 }
-                else if (up->is_present && self->y >= 5 && self->y <= 7){
+                else if (up->is_present && self->y >= 5000 - self->drift 
+                            && self->y <= 7000 + self->drift){
                     self->y = 0;
                     enqueue(self->queue, 0);
                     enqueue(self->queue, 1);
@@ -267,7 +282,7 @@ reactor ReceiverModel{
                     // printQueue(self->queue);
                     self->currState = STATE_LAST1;
                 }
-                else if (self->y >= 7){
+                else if (self->y >= 7000 - self->drift){
                     self->y = 0;
                     enqueue(self->queue, 0);
                     printf("Receiver State: LAST0 -> IDLE\n");

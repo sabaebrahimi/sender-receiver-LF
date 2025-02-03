@@ -8,7 +8,7 @@
 void _receivermodelreaction_function_0(void* instance_args) {
     _receivermodel_self_t* self = (_receivermodel_self_t*)instance_args; SUPPRESS_UNUSED_WARNING(self);
     _receivermodel_a_t* a = &self->_lf_a;
-    #line 215 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
+    #line 225 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
     self->queue = createQueue(10);
     lf_schedule(a, 0);
 #line 15 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\_receivermodel.c"
@@ -27,7 +27,7 @@ void _receivermodelreaction_function_1(void* instance_args) {
     lf_critical_section_exit(self->base.environment);
     _receivermodel_up_t* up = self->_lf_up;
     int up_width = self->_lf_up_width; SUPPRESS_UNUSED_WARNING(up_width);
-    #line 220 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
+    #line 230 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
     // printf("y: %d\n", self->y);
     switch(self->currState){
         case STATE_IDLE:
@@ -41,20 +41,23 @@ void _receivermodelreaction_function_1(void* instance_args) {
             break;
     
         case STATE_LAST1:
-            if (up->is_present && self->y >= 3 && self->y <= 5){
+            if (up->is_present && self->y >= 3000 - self->drift 
+                        && self->y <= 5000 + self->drift){
                 self->y = 0;
                 enqueue(self->queue, 1);
                 printf("Receiver State: LAST1 -> LAST1\n");
                 // printQueue(self->queue);
             }
-            else if (up->is_present && self->y >= 5 && self->y <= 7){
+            else if (up->is_present && self->y >= 5000 - self->drift 
+                        && self->y <= 7000 + self->drift){
                 self->y = 0;
                 enqueue(self->queue, 0);
                 printf("Receiver State: LAST1 -> LAST0\n");
                 // printQueue(self->queue);
                 self->currState = STATE_LAST0;
             }
-            else if (up->is_present && self->y >= 7 && self->y <= 9){
+            else if (up->is_present && self->y >= 7000 - self->drift 
+                        && self->y <= 9000 + self->drift){
                 self->y = 0;
                 enqueue(self->queue, 0);
                 enqueue(self->queue, 1);
@@ -64,13 +67,15 @@ void _receivermodelreaction_function_1(void* instance_args) {
             break;
     
         case STATE_LAST0:
-        if (up->is_present && self->y >= 3 && self->y <= 5){
+        if (up->is_present && self->y >= 3000 - self->drift 
+                        && self->y <= 5000 + self->drift){
                 self->y = 0;
                 enqueue(self->queue, 0);
                 printf("Receiver State: LAST0 -> LAST0\n");
                 // printQueue(self->queue);
             }
-            else if (up->is_present && self->y >= 5 && self->y <= 7){
+            else if (up->is_present && self->y >= 5000 - self->drift 
+                        && self->y <= 7000 + self->drift){
                 self->y = 0;
                 enqueue(self->queue, 0);
                 enqueue(self->queue, 1);
@@ -78,7 +83,7 @@ void _receivermodelreaction_function_1(void* instance_args) {
                 // printQueue(self->queue);
                 self->currState = STATE_LAST1;
             }
-            else if (self->y >= 7){
+            else if (self->y >= 7000 - self->drift){
                 self->y = 0;
                 enqueue(self->queue, 0);
                 printf("Receiver State: LAST0 -> IDLE\n");
@@ -90,18 +95,18 @@ void _receivermodelreaction_function_1(void* instance_args) {
     
     self->y++;
     lf_schedule(a, self->step);
-#line 94 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\_receivermodel.c"
+#line 99 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\_receivermodel.c"
 }
 #include "include/api/reaction_macros_undef.h"
 #include "include/api/reaction_macros.h"
 void _receivermodelreaction_function_2(void* instance_args) {
     _receivermodel_self_t* self = (_receivermodel_self_t*)instance_args; SUPPRESS_UNUSED_WARNING(self);
     
-    #line 285 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
+    #line 300 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
     if (self->queue != NULL) {
         deleteQueue(self->queue);
     }
-#line 105 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\_receivermodel.c"
+#line 110 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\_receivermodel.c"
 }
 #include "include/api/reaction_macros_undef.h"
 _receivermodel_self_t* new__receivermodel() {

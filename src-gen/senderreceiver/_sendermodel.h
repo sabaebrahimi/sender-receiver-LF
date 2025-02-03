@@ -1,8 +1,8 @@
 #ifndef _SENDERMODEL_H
 #define _SENDERMODEL_H
 #include "include/core/reactor.h"
-#ifndef TOP_LEVEL_PREAMBLE_1432929075_H
-#define TOP_LEVEL_PREAMBLE_1432929075_H
+#ifndef TOP_LEVEL_PREAMBLE_448765163_H
+#define TOP_LEVEL_PREAMBLE_448765163_H
 #include <stdlib.h>
 typedef enum {
     STATE_A = 0, STATE_B = 1,
@@ -95,19 +95,21 @@ typedef struct {
 typedef struct {
     struct self_base_t base;
 #line 98 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\_sendermodel.h"
-    #line 55 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
+    #line 54 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
     int* sequence;
-    #line 56 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
+    #line 55 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
     int length;
-    #line 58 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
+    #line 57 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
     int x;
+    #line 58 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
+    int drift;
     #line 60 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
     interval_t step;
     #line 62 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
     SenderModelState currState;
     #line 63 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
     queue_ss_t* queue;
-#line 111 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\_sendermodel.h"
+#line 113 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\_sendermodel.h"
     _sendermodel_a_t _lf_a;
     _sendermodel_in_t* _lf_in;
     // width of -2 indicates that it is not a multiport.

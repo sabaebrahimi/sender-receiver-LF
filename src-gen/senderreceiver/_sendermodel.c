@@ -55,13 +55,15 @@ void _sendermodelreaction_function_2(void* instance_args) {
     // printf("x: %d\n", self->x);
     switch(self->currState) {
         case STATE_B:
-            if (self->x >= 2 && get_front(self->queue) == 1) {
+            if (self->x >= 2000 - self->drift 
+                    && get_front(self->queue) == 1) {
                 lf_set(up, 1);
                 printf("Sender State: B -> C\n");
                 dequeue(self->queue);
                 self->currState = STATE_C;
                 self->x = 0;
-            } else if (self->x >= 2 && get_front(self->queue) == 0) {
+            } else if (self->x >= 2000 - self->drift
+                    && get_front(self->queue) == 0) {
                 lf_set(up, 1);
                 printf("Sender State: B -> D\n");
                 dequeue(self->queue);
@@ -72,7 +74,7 @@ void _sendermodelreaction_function_2(void* instance_args) {
             break;
     
         case STATE_C:
-            if (self->x >= 2) {
+            if (self->x >= 2000 - self->drift) {
                 lf_set(down, 1);
                 printf("Sender State: C -> B\n");
                 self->currState = STATE_B;
@@ -82,13 +84,15 @@ void _sendermodelreaction_function_2(void* instance_args) {
             break;
     
         case STATE_D:
-            if (self->x >= 4 && get_front(self->queue) == 1) {
+            if (self->x >= 4000 - self->drift 
+                    && get_front(self->queue) == 1) {
                 lf_set(down, 1);
                 printf("Sender State: D -> E\n");
                 dequeue(self->queue);
                 self->currState = STATE_E;
                 self->x = 0;
-            } else if (self->x >= 4 && get_front(self->queue) == 0) {
+            } else if (self->x >= 4000 - self->drift 
+                    && get_front(self->queue) == 0) {
                 lf_set(down, 1);
                 printf("Sender State: D -> F\n");
                 dequeue(self->queue);
@@ -99,13 +103,15 @@ void _sendermodelreaction_function_2(void* instance_args) {
             break;
     
         case STATE_E:
-            if (self->x >= 4 && get_front(self->queue) == 1) {
+            if (self->x >= 4000 - self->drift 
+                    && get_front(self->queue) == 1) {
                 lf_set(up, 1);
                 printf("Sender State: E -> C\n");
                 dequeue(self->queue);
                 self->currState = STATE_C;
                 self->x = 0;
-            } else if (self->x >= 4 && get_front(self->queue) == 0) {
+            } else if (self->x >= 4000 - self->drift 
+                    && get_front(self->queue) == 0) {
                 lf_set(up, 1);
                 printf("Sender State: E -> D\n");
                 dequeue(self->queue);
@@ -116,7 +122,7 @@ void _sendermodelreaction_function_2(void* instance_args) {
             break;
     
         case STATE_F:
-            if (self->x >= 2) {
+            if (self->x >= 2000 - self->drift) {
                 lf_set(up, 1);
                 printf("Sender State: F -> G\n");
                 self->currState = STATE_G;
@@ -126,19 +132,22 @@ void _sendermodelreaction_function_2(void* instance_args) {
             break;
     
         case STATE_G:
-            if (self->x >= 2 && get_front(self->queue) == 0) {
+            if (self->x >= 2000 - self->drift 
+                    && get_front(self->queue) == 0) {
                 lf_set(down, 1);
                 printf("Sender State: G -> F\n");
                 self->currState = STATE_F;
                 dequeue(self->queue);
                 self->x = 0;
-            } else if (self->x >= 2 && get_front(self->queue) == 1) {
+            } else if (self->x >= 2000 - self->drift 
+                    && get_front(self->queue) == 1) {
                 lf_set(down, 1);
                 printf("Sender State: G -> E\n");
                 self->currState = STATE_E;
                 dequeue(self->queue);
                 self->x = 0;
-            } else if (self->x >= 2 && is_empty(self->queue)) {
+            } else if (self->x >= 2000 - self->drift 
+                    && is_empty(self->queue)) {
                 lf_set(down, 1);
                 printf("Sender State: G -> H\n");
                 self->currState = STATE_H;
@@ -147,7 +156,7 @@ void _sendermodelreaction_function_2(void* instance_args) {
             break;
     
         case STATE_H:
-            if (self->x >= 4) {
+            if (self->x >= 4000 - self->drift) {
                 printf("Sender State: H -> A\n");
                 self->currState = STATE_A;
             }
@@ -158,18 +167,18 @@ void _sendermodelreaction_function_2(void* instance_args) {
     
     // Increment time
     self->x++;
-#line 162 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\_sendermodel.c"
+#line 171 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\_sendermodel.c"
 }
 #include "include/api/reaction_macros_undef.h"
 #include "include/api/reaction_macros.h"
 void _sendermodelreaction_function_3(void* instance_args) {
     _sendermodel_self_t* self = (_sendermodel_self_t*)instance_args; SUPPRESS_UNUSED_WARNING(self);
     
-    #line 198 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
+    #line 207 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
     if (self->queue != NULL) {
         deleteQueue(self->queue);
     }
-#line 173 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\_sendermodel.c"
+#line 182 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\_sendermodel.c"
 }
 #include "include/api/reaction_macros_undef.h"
 _sendermodel_self_t* new__sendermodel() {
