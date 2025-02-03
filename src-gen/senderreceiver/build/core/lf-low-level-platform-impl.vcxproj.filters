@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Amin\Desktop\RT\project\sender-receiver-LF\sender-receiver-LF\src-gen\senderreceiver\low_level_platform\impl\src\lf_windows_support.c">
+    <ClCompile Include="C:\Users\Amin\Desktop\RT\project\sender-receiver-LF\src-gen\senderreceiver\low_level_platform\impl\src\lf_windows_support.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Amin\Desktop\RT\project\sender-receiver-LF\sender-receiver-LF\src-gen\senderreceiver\low_level_platform\impl\src\lf_atomic_windows.c">
+    <ClCompile Include="C:\Users\Amin\Desktop\RT\project\sender-receiver-LF\src-gen\senderreceiver\low_level_platform\impl\src\lf_atomic_windows.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Amin\Desktop\RT\project\sender-receiver-LF\sender-receiver-LF\src-gen\senderreceiver\low_level_platform\impl\src\lf_platform_util.c">
+    <ClCompile Include="C:\Users\Amin\Desktop\RT\project\sender-receiver-LF\src-gen\senderreceiver\low_level_platform\impl\src\lf_platform_util.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Amin\Desktop\RT\project\sender-receiver-LF\sender-receiver-LF\src-gen\senderreceiver\core\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Amin\Desktop\RT\project\sender-receiver-LF\src-gen\senderreceiver\core\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{F46393AF-91C4-3CDA-9458-D53E38EA22F9}</UniqueIdentifier>
+      <UniqueIdentifier>{F6CC63B7-4C48-3DA7-85C1-F4FB49F6A304}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

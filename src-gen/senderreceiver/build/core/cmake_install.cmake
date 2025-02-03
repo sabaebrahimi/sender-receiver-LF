@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/core
+# Install script for directory: C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/core
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
