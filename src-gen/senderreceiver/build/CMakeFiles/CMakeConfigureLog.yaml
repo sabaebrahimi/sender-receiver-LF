@@ -24,9 +24,9 @@ events:
       The output was:
       0
       MSBuild version 17.12.12+1cce77968 for .NET Framework
-      Build started 2/3/2025 12:47:46 AM.
+      Build started 2/3/2025 5:46:37 PM.
       
-      Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\3.30.7\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\3.30.7\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
         Creating directory "Debug\\".
         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
@@ -39,7 +39,7 @@ events:
         CMakeCCompilerId.c
       Link:
         C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
-        CompilerIdC.vcxproj -> C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\3.30.7\\CompilerIdC\\CompilerIdC.exe
+        CompilerIdC.vcxproj -> C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\3.30.7\\CompilerIdC\\CompilerIdC.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
         :VCEnd
@@ -47,13 +47,13 @@ events:
       FinalizeBuildStatus:
         Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
         Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
-      Done Building Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\3.30.7\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      Done Building Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\3.30.7\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
       
       Build succeeded.
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.52
+      Time Elapsed 00:00:00.51
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -61,7 +61,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
       
       The C compiler identification is MSVC, found in:
-        C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/3.30.7/CompilerIdC/CompilerIdC.exe
+        C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/3.30.7/CompilerIdC/CompilerIdC.exe
       
   -
     kind: "try_compile-v1"
@@ -72,8 +72,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-3lkud1"
-      binary: "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-3lkud1"
+      source: "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-6u37n7"
+      binary: "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-6u37n7"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -82,40 +82,40 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-3lkud1'
+        Change Dir: 'C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-6u37n7'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_7267c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_a3b0a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.12.12+1cce77968 for .NET Framework
-        Build started 2/3/2025 12:47:46 AM.
+        Build started 2/3/2025 5:46:38 PM.
         
-        Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3lkud1\\cmTC_7267c.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6u37n7\\cmTC_a3b0a.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_7267c.dir\\Debug\\".
+          Creating directory "cmTC_a3b0a.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3lkud1\\Debug\\".
-          Creating directory "cmTC_7267c.dir\\Debug\\cmTC_7267c.tlog\\".
+          Creating directory "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6u37n7\\Debug\\".
+          Creating directory "cmTC_a3b0a.dir\\Debug\\cmTC_a3b0a.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_7267c.dir\\Debug\\cmTC_7267c.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_7267c.dir\\Debug\\cmTC_7267c.tlog\\unsuccessfulbuild".
+          Creating "cmTC_a3b0a.dir\\Debug\\cmTC_a3b0a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_a3b0a.dir\\Debug\\cmTC_a3b0a.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7267c.dir\\Debug\\\\" /Fd"cmTC_7267c.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a3b0a.dir\\Debug\\\\" /Fd"cmTC_a3b0a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34436 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7267c.dir\\Debug\\\\" /Fd"cmTC_7267c.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a3b0a.dir\\Debug\\\\" /Fd"cmTC_a3b0a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3lkud1\\Debug\\cmTC_7267c.exe" /INCREMENTAL /ILK:"cmTC_7267c.dir\\Debug\\cmTC_7267c.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-3lkud1/Debug/cmTC_7267c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-3lkud1/Debug/cmTC_7267c.lib" /MACHINE:X64  /machine:x64 cmTC_7267c.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_7267c.vcxproj -> C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3lkud1\\Debug\\cmTC_7267c.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6u37n7\\Debug\\cmTC_a3b0a.exe" /INCREMENTAL /ILK:"cmTC_a3b0a.dir\\Debug\\cmTC_a3b0a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-6u37n7/Debug/cmTC_a3b0a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-6u37n7/Debug/cmTC_a3b0a.lib" /MACHINE:X64  /machine:x64 cmTC_a3b0a.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_a3b0a.vcxproj -> C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6u37n7\\Debug\\cmTC_a3b0a.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_7267c.dir\\Debug\\cmTC_7267c.tlog\\unsuccessfulbuild".
-          Touching "cmTC_7267c.dir\\Debug\\cmTC_7267c.tlog\\cmTC_7267c.lastbuildstate".
-        Done Building Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3lkud1\\cmTC_7267c.vcxproj" (default targets).
+          Deleting file "cmTC_a3b0a.dir\\Debug\\cmTC_a3b0a.tlog\\unsuccessfulbuild".
+          Touching "cmTC_a3b0a.dir\\Debug\\cmTC_a3b0a.tlog\\cmTC_a3b0a.lastbuildstate".
+        Done Building Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6u37n7\\cmTC_a3b0a.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.52
+        Time Elapsed 00:00:00.49
         
       exitCode: 0
   -
@@ -158,8 +158,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-f1cytg"
-      binary: "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-f1cytg"
+      source: "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-y11tch"
+      binary: "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-y11tch"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -168,40 +168,40 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-f1cytg'
+        Change Dir: 'C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-y11tch'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_a3957.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_59061.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.12.12+1cce77968 for .NET Framework
-        Build started 2/3/2025 12:47:47 AM.
+        Build started 2/3/2025 5:46:39 PM.
         
-        Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-f1cytg\\cmTC_a3957.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y11tch\\cmTC_59061.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_a3957.dir\\Debug\\".
+          Creating directory "cmTC_59061.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-f1cytg\\Debug\\".
-          Creating directory "cmTC_a3957.dir\\Debug\\cmTC_a3957.tlog\\".
+          Creating directory "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y11tch\\Debug\\".
+          Creating directory "cmTC_59061.dir\\Debug\\cmTC_59061.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_a3957.dir\\Debug\\cmTC_a3957.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_a3957.dir\\Debug\\cmTC_a3957.tlog\\unsuccessfulbuild".
+          Creating "cmTC_59061.dir\\Debug\\cmTC_59061.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_59061.dir\\Debug\\cmTC_59061.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_a3957.dir\\Debug\\\\" /Fd"cmTC_a3957.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-f1cytg\\src.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_59061.dir\\Debug\\\\" /Fd"cmTC_59061.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y11tch\\src.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34436 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_a3957.dir\\Debug\\\\" /Fd"cmTC_a3957.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-f1cytg\\src.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_59061.dir\\Debug\\\\" /Fd"cmTC_59061.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y11tch\\src.c"
           src.c
-        C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-f1cytg\\src.c(1,1): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-f1cytg\\cmTC_a3957.vcxproj]
-        Done Building Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-f1cytg\\cmTC_a3957.vcxproj" (default targets) -- FAILED.
+        C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y11tch\\src.c(1,1): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y11tch\\cmTC_59061.vcxproj]
+        Done Building Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y11tch\\cmTC_59061.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-f1cytg\\cmTC_a3957.vcxproj" (default target) (1) ->
+        "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y11tch\\cmTC_59061.vcxproj" (default target) (1) ->
         (ClCompile target) -> 
-          C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-f1cytg\\src.c(1,1): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-f1cytg\\cmTC_a3957.vcxproj]
+          C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y11tch\\src.c(1,1): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y11tch\\cmTC_59061.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:00.32
+        Time Elapsed 00:00:00.30
         
       exitCode: 1
   -
@@ -215,8 +215,8 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-mfdetv"
-      binary: "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-mfdetv"
+      source: "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-43jzsp"
+      binary: "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-43jzsp"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -225,37 +225,37 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-mfdetv'
+        Change Dir: 'C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-43jzsp'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_1e648.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_17abf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.12.12+1cce77968 for .NET Framework
-        Build started 2/3/2025 12:47:48 AM.
+        Build started 2/3/2025 5:46:39 PM.
         
-        Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mfdetv\\cmTC_1e648.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-43jzsp\\cmTC_17abf.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_1e648.dir\\Debug\\".
+          Creating directory "cmTC_17abf.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mfdetv\\Debug\\".
-          Creating directory "cmTC_1e648.dir\\Debug\\cmTC_1e648.tlog\\".
+          Creating directory "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-43jzsp\\Debug\\".
+          Creating directory "cmTC_17abf.dir\\Debug\\cmTC_17abf.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_1e648.dir\\Debug\\cmTC_1e648.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_1e648.dir\\Debug\\cmTC_1e648.tlog\\unsuccessfulbuild".
+          Creating "cmTC_17abf.dir\\Debug\\cmTC_17abf.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_17abf.dir\\Debug\\cmTC_17abf.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_1e648.dir\\Debug\\\\" /Fd"cmTC_1e648.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mfdetv\\CheckFunctionExists.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_17abf.dir\\Debug\\\\" /Fd"cmTC_17abf.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-43jzsp\\CheckFunctionExists.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34436 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_1e648.dir\\Debug\\\\" /Fd"cmTC_1e648.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mfdetv\\CheckFunctionExists.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_17abf.dir\\Debug\\\\" /Fd"cmTC_17abf.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-43jzsp\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mfdetv\\Debug\\cmTC_1e648.exe" /INCREMENTAL /ILK:"cmTC_1e648.dir\\Debug\\cmTC_1e648.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-mfdetv/Debug/cmTC_1e648.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-mfdetv/Debug/cmTC_1e648.lib" /MACHINE:X64  /machine:x64 cmTC_1e648.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mfdetv\\cmTC_1e648.vcxproj]
-        Done Building Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mfdetv\\cmTC_1e648.vcxproj" (default targets) -- FAILED.
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-43jzsp\\Debug\\cmTC_17abf.exe" /INCREMENTAL /ILK:"cmTC_17abf.dir\\Debug\\cmTC_17abf.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-43jzsp/Debug/cmTC_17abf.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-43jzsp/Debug/cmTC_17abf.lib" /MACHINE:X64  /machine:x64 cmTC_17abf.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-43jzsp\\cmTC_17abf.vcxproj]
+        Done Building Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-43jzsp\\cmTC_17abf.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mfdetv\\cmTC_1e648.vcxproj" (default target) (1) ->
+        "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-43jzsp\\cmTC_17abf.vcxproj" (default target) (1) ->
         (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mfdetv\\cmTC_1e648.vcxproj]
+          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-43jzsp\\cmTC_17abf.vcxproj]
         
             0 Warning(s)
             1 Error(s)
@@ -274,8 +274,8 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-44f3ev"
-      binary: "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-44f3ev"
+      source: "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-2vhwve"
+      binary: "C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-2vhwve"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -284,42 +284,42 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-44f3ev'
+        Change Dir: 'C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-2vhwve'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_eb315.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_5328d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.12.12+1cce77968 for .NET Framework
-        Build started 2/3/2025 12:47:48 AM.
+        Build started 2/3/2025 5:46:40 PM.
         
-        Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44f3ev\\cmTC_eb315.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2vhwve\\cmTC_5328d.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_eb315.dir\\Debug\\".
+          Creating directory "cmTC_5328d.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44f3ev\\Debug\\".
-          Creating directory "cmTC_eb315.dir\\Debug\\cmTC_eb315.tlog\\".
+          Creating directory "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2vhwve\\Debug\\".
+          Creating directory "cmTC_5328d.dir\\Debug\\cmTC_5328d.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_eb315.dir\\Debug\\cmTC_eb315.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_eb315.dir\\Debug\\cmTC_eb315.tlog\\unsuccessfulbuild".
+          Creating "cmTC_5328d.dir\\Debug\\cmTC_5328d.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_5328d.dir\\Debug\\cmTC_5328d.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_eb315.dir\\Debug\\\\" /Fd"cmTC_eb315.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44f3ev\\CheckFunctionExists.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_5328d.dir\\Debug\\\\" /Fd"cmTC_5328d.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2vhwve\\CheckFunctionExists.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34436 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_eb315.dir\\Debug\\\\" /Fd"cmTC_eb315.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44f3ev\\CheckFunctionExists.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c11 /Fo"cmTC_5328d.dir\\Debug\\\\" /Fd"cmTC_5328d.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2vhwve\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44f3ev\\Debug\\cmTC_eb315.exe" /INCREMENTAL /ILK:"cmTC_eb315.dir\\Debug\\cmTC_eb315.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-44f3ev/Debug/cmTC_eb315.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-44f3ev/Debug/cmTC_eb315.lib" /MACHINE:X64  /machine:x64 cmTC_eb315.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44f3ev\\cmTC_eb315.vcxproj]
-        Done Building Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44f3ev\\cmTC_eb315.vcxproj" (default targets) -- FAILED.
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2vhwve\\Debug\\cmTC_5328d.exe" /INCREMENTAL /ILK:"cmTC_5328d.dir\\Debug\\cmTC_5328d.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-2vhwve/Debug/cmTC_5328d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/CMakeScratch/TryCompile-2vhwve/Debug/cmTC_5328d.lib" /MACHINE:X64  /machine:x64 cmTC_5328d.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2vhwve\\cmTC_5328d.vcxproj]
+        Done Building Project "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2vhwve\\cmTC_5328d.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44f3ev\\cmTC_eb315.vcxproj" (default target) (1) ->
+        "C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2vhwve\\cmTC_5328d.vcxproj" (default target) (1) ->
         (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-44f3ev\\cmTC_eb315.vcxproj]
+          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2vhwve\\cmTC_5328d.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:00.39
+        Time Elapsed 00:00:00.40
         
       exitCode: 1
 ...

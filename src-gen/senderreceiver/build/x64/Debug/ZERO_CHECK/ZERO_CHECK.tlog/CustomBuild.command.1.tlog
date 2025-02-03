@@ -1,0 +1,10 @@
+^C:\USERS\AMIN\DESKTOP\RT\PROJECT\SENDER-RECEIVER-LF\SRC-GEN\SENDERRECEIVER\BUILD\CMAKEFILES\8BCCEB096E1D13C48D1477F087B7E7D4\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver -BC:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/senderreceiver.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

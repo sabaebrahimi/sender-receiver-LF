@@ -6,16 +6,16 @@ C:/Program Files/CMake/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cm
 C:/Program Files/CMake/share/cmake-3.30/Modules/FindPackageMessage.cmake
 C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake
 C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/core/CMakeLists.txt
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/core/lf_utils.cmake
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/core/threaded/CMakeLists.txt
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/core/utils/CMakeLists.txt
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/core/utils/hashset/CMakeLists.txt
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/logging/api/CMakeLists.txt
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/low_level_platform/api/CMakeLists.txt
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/low_level_platform/impl/CMakeLists.txt
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/platform/api/CMakeLists.txt
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/platform/impl/CMakeLists.txt
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/tag/api/CMakeLists.txt
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/trace/api/types/CMakeLists.txt
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/version/api/CMakeLists.txt
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/core/CMakeLists.txt
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/core/lf_utils.cmake
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/core/threaded/CMakeLists.txt
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/core/utils/CMakeLists.txt
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/core/utils/hashset/CMakeLists.txt
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/logging/api/CMakeLists.txt
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/low_level_platform/api/CMakeLists.txt
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/low_level_platform/impl/CMakeLists.txt
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/platform/api/CMakeLists.txt
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/platform/impl/CMakeLists.txt
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/tag/api/CMakeLists.txt
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/trace/api/types/CMakeLists.txt
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/version/api/CMakeLists.txt

@@ -3,7 +3,7 @@
 #include "include/senderreceiver\senderreceiver.h"
 #include "_senderreceiver_main.h"
 // *********** From the preamble, verbatim:
-#line 211 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src/senderreceiver.lf"
+#line 294 "/Users/Amin/Desktop/RT/project/sender-receiver-LF/src/senderreceiver.lf"
 // queue_ss_t operations
 queue_ss_t* createQueue(int capacity) {
     queue_ss_t* queue = (queue_ss_t*)malloc(sizeof(queue_ss_t));
@@ -42,7 +42,20 @@ void deleteQueue(queue_ss_t* queue) {
 int is_empty(queue_ss_t* queue) {
     return queue->front > queue->rear;
 }
-#line 46 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\sender-receiver-LF\\src-gen\\senderreceiver\\_senderreceiver_main.c"
+
+void printQueue(queue_ss_t* queue, const char* message) {
+    if (is_empty(queue)) {
+        printf("%s: Queue is empty\n", message);
+        return;
+    }
+
+    printf("%s: ", message);
+    for (int i = queue->front; i <= queue->rear; i++) {
+        printf("%d ", queue->items[i]);
+    }
+    printf("\n");
+}
+#line 59 "c:\\Users\\Amin\\Desktop\\RT\\project\\sender-receiver-LF\\src-gen\\senderreceiver\\_senderreceiver_main.c"
 
 // *********** End of preamble.
 // ***** Start of method declarations.

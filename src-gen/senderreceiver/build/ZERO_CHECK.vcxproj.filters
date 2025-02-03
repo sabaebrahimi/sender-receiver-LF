@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Amin\Desktop\RT\project\sender-receiver-LF\sender-receiver-LF\src-gen\senderreceiver\build\CMakeFiles\3e4b04930b644ecce5659a2579054769\generate.stamp.rule">
+    <CustomBuild Include="C:\Users\Amin\Desktop\RT\project\sender-receiver-LF\src-gen\senderreceiver\build\CMakeFiles\8bcceb096e1d13c48d1477f087b7e7d4\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{6E013518-1FD9-30E7-8CD8-4D031F31D4F4}</UniqueIdentifier>
+      <UniqueIdentifier>{04AB5CFE-D63D-3D37-A157-AD49DC7A8805}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

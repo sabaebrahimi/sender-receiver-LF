@@ -36,7 +36,7 @@ set(CMAKE_COLOR_DIAGNOSTICS ON)
 
 # Set default values for build parameters
 set(SCHEDULER SCHED_NP CACHE STRING "")
-set(LF_REACTION_GRAPH_BREADTH 2 CACHE STRING "")
+set(LF_REACTION_GRAPH_BREADTH 3 CACHE STRING "")
 set(NUMBER_OF_WORKERS 0 CACHE STRING "")
 set(LOG_LEVEL 2 CACHE STRING "")
 set(NUMBER_OF_WATCHDOGS 0 CACHE STRING "")
@@ -52,6 +52,7 @@ add_executable(
     _senderreceiver_main.c
     _bitgenerator.c
     _sendermodel.c
+    _receivermodel.c
     senderreceiver.c
 )
 

@@ -1,8 +1,8 @@
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/senderreceiver.dir
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/INSTALL.dir
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/ZERO_CHECK.dir
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/core/CMakeFiles/reactor-c.dir
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/core/CMakeFiles/lf-low-level-platform-impl.dir
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/core/CMakeFiles/lf-platform-impl.dir
-C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/sender-receiver-LF/src-gen/senderreceiver/build/core/CMakeFiles/INSTALL.dir
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/senderreceiver.dir
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/INSTALL.dir
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/core/CMakeFiles/reactor-c.dir
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/core/CMakeFiles/lf-low-level-platform-impl.dir
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/core/CMakeFiles/lf-platform-impl.dir
+C:/Users/Amin/Desktop/RT/project/sender-receiver-LF/src-gen/senderreceiver/build/core/CMakeFiles/INSTALL.dir
