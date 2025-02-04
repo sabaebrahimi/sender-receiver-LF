@@ -1,4 +1,7 @@
 build/
 .vscode/
-src-gen/
 bin/
+include/
+src-gen/senderreceiver/
+src-gen/
+src-gen/*
