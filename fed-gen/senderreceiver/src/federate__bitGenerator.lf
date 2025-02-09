@@ -1,0 +1,101 @@
+target C {
+  cmake-include: "include/federate__bitGenerator_extension.cmake",
+  compile-definitions: {
+    FEDERATED_DECENTRALIZED: "",
+    EXECUTABLE_PREAMBLE: "",
+    NUMBER_OF_FEDERATES: "3",
+    FEDERATE_ID: "0",
+    FEDERATED: "",
+    LF_CLOCK_SYNC: "1",
+    _LF_FEDERATE_NAMES_COMMA_SEPARATED: "\"federate__bitGenerator,federate__sender,federate__receiver\""
+  },
+  coordination: "decentralized",
+  _fed_setup: "include/_federate__bitGenerator_preamble.h",
+  keepalive: true,
+  single-threaded: false,
+  timeout: 40 sec
+}
+
+
+NONE preamble {=
+#include <stdlib.h>
+typedef enum {
+    STATE_A = 0, STATE_B = 1,
+    STATE_C = 2, STATE_D = 3,
+    STATE_E = 4, STATE_F = 5,
+    STATE_G = 6, STATE_H = 7
+} SenderModelState;
+
+typedef enum {
+    STATE_IDLE  = 0,
+    STATE_LAST1 = 1,
+    STATE_LAST0 = 2
+} ReceiverModelState;
+
+// queue_ss_t structure for Enq operation
+typedef struct {
+    int* items;
+    int front;
+    int rear;
+    int capacity;
+} queue_ss_t;
+=}
+preamble {=
+#ifdef __cplusplus
+extern "C" {
+#endif
+#include "core/federated/federate.h"
+#include "core/federated/network/net_common.h"
+#include "core/federated/network/net_util.h"
+#include "core/federated/clock-sync.h"
+#include "core/threaded/reactor_threaded.h"
+#include "core/utils/util.h"
+extern federate_instance_t _fed;
+#ifdef __cplusplus
+}
+#endif
+
+
+=}
+
+reactor BitGenerator {
+  timer inputTimer(0, 20 sec)
+  state sent: int = 0
+  output out: int
+
+  reaction(inputTimer) ->
+  out {=
+    if (self->sent == 0) {
+        lf_set(out, 1);
+        self->sent = 1;
+    }
+  =}
+}
+@_networkReactor("sender")
+reactor NetworkSender_0<SENDERINDEXPARAMETER> {
+  input[1] msg: int
+
+  reaction(msg) {=
+    // Sending from msg[0] in federate federate__bitGenerator to sender.in in federate federate__sender
+    if (!msg[0]->is_present) {
+    return;
+    }
+    size_t _lf_message_length = sizeof(int);
+    lf_send_tagged_message(self->base.environment, NEVER, MSG_TYPE_P2P_TAGGED_MESSAGE, 0, 1, "federate 1", _lf_message_length, (unsigned char*)&msg[0]->value);
+  =}
+}
+@_fed_config()
+main reactor  {
+
+    bitGenerator = new BitGenerator()
+    
+    
+    
+    
+    
+    @_tpoLevel(1)
+    ns_federate__sender = new NetworkSender_0<{= 0 =}>()
+    
+    
+    bitGenerator.out -> ns_federate__sender.msg
+}

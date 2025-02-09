@@ -1,4 +1,4 @@
-target C {timeout: 40 sec}
+target C {tracing: true, timeout: 40 sec}
 // Preamble for shared definitions
 preamble {=
     #include <stdlib.h>
