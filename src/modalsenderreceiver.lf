@@ -1,4 +1,6 @@
-target C {tracing: true, timeout: 40 sec}
+target C {
+    timeout: 40 sec,
+}
 // Preamble for shared definitions
 preamble {=
     #include <stdlib.h>
@@ -44,9 +46,9 @@ reactor SenderModel {
 
     state x: instant_t = 0
     state last_time_reset: instant_t = 0
-    state drift: int = 100000000
+    state drift: instant_t = 10000000
 
-    state step: time = 1 msec
+    state step: time = 100 msec
     logical action a
     state queue: queue_ss_t*
 
@@ -62,29 +64,30 @@ reactor SenderModel {
         =}
         reaction(in) -> up, down, a, reset(B){=
             printf("Received input: %d\n", in->value);
-                    printf("Sender State: A -> B\n");
-                    dequeue(self->queue);
-                    self->last_time_reset = lf_time_physical_elapsed();
-                    lf_set_mode(B);
-                    lf_schedule(a, self->step);
+            printf("Sender State: A -> B\n");
+            dequeue(self->queue);
+            self->last_time_reset = lf_time_physical_elapsed();
+            lf_set_mode(B);
+            lf_schedule(a, self->step);
+
         =}
     }
 
     mode B{
         reaction(a) -> up, down, a, reset(C), reset(D){=
             self->x = lf_time_physical_elapsed() - self->last_time_reset;
-            if (self->x >= 2000000000 + self->drift){
+            if (self->x >= 2 * (1000000000 + self->drift)){
                     printf("Clock invariant in the \"Sender->B\" state violated.");
                     exit(-1);
             }
-            else if (self->x >= 2000000000 - self->drift 
+            else if (self->x >= 2 * (1000000000 - self->drift)
                     && get_front(self->queue) == 1) {
                 lf_set(up, 1);
                 printf("Sender State: B -> C\n");
                 dequeue(self->queue);
                 lf_set_mode(C);
                 self->last_time_reset = lf_time_physical_elapsed();
-            } else if (self->x >= 2000000000 - self->drift
+            } else if (self->x >= 2 * (1000000000 - self->drift)
                     && get_front(self->queue) == 0) {
                 lf_set(up, 1);
                 printf("Sender State: B -> D\n");
@@ -99,11 +102,11 @@ reactor SenderModel {
     mode C{
         reaction(a) -> up, down, a, reset(B){=
             self->x = lf_time_physical_elapsed() - self->last_time_reset;
-            if (self->x >= 2000000000 + self->drift){
+            if (self->x >= 2 * (1000000000 + self->drift)){
                 printf("Clock invariant in the \"Sender->C\" state violated.");
                 exit(-1);
             }
-            else if (self->x >= 2000000000 - self->drift) {
+            else if (self->x >= 2 * (1000000000 - self->drift)) {
                 lf_set(down, 1);
                 printf("Sender State: C -> B\n");
                 lf_set_mode(B);
@@ -116,18 +119,18 @@ reactor SenderModel {
     mode D{
         reaction(a) -> up, down, a, reset(E), reset(F){=
             self->x = lf_time_physical_elapsed() - self->last_time_reset;
-            if (self->x >= 4000000000 + self->drift){
+            if (self->x >= 4 * (1000000000 + self->drift)){
                 printf("Clock invariant in the \"Sender->D\" state violated.");
                 exit(-1);
             }
-            else if (self->x >= 4000000000 - self->drift 
+            else if (self->x >= 4 * (1000000000 - self->drift)
                     && get_front(self->queue) == 1) {
                 lf_set(down, 1);
                 printf("Sender State: D -> E\n");
                 dequeue(self->queue);
                 lf_set_mode(E);
                 self->last_time_reset = lf_time_physical_elapsed();
-            } else if (self->x >= 4000000000 - self->drift 
+            } else if (self->x >= 4 * (1000000000 - self->drift) 
                     && get_front(self->queue) == 0) {
                 lf_set(down, 1);
                 printf("Sender State: D -> F\n");
@@ -142,18 +145,19 @@ reactor SenderModel {
     mode E{
         reaction(a) -> up, down, a, reset(C), reset(D){=
             self->x = lf_time_physical_elapsed() - self->last_time_reset;
-            if (self->x >= 4000000000 + self->drift){
+            if (self->x >= 4 * (1000000000 + self->drift)){
+                
                 printf("Clock invariant in the \"Sender->E\" state violated.");
                 exit(-1);
             }
-            else if (self->x >= 4000000000 - self->drift 
+            else if (self->x >= 4 * (1000000000 - self->drift) 
                     && get_front(self->queue) == 1) {
                 lf_set(up, 1);
                 printf("Sender State: E -> C\n");
                 dequeue(self->queue);
                 lf_set_mode(C);
                 self->last_time_reset = lf_time_physical_elapsed();
-            } else if (self->x >= 4000000000 - self->drift 
+            } else if (self->x >= 4 * (1000000000 - self->drift) 
                     && get_front(self->queue) == 0) {
                 lf_set(up, 1);
                 printf("Sender State: E -> D\n");
@@ -168,11 +172,11 @@ reactor SenderModel {
     mode F{
         reaction(a) -> up, down, a, reset(G){=
             self->x = lf_time_physical_elapsed() - self->last_time_reset;
-            if (self->x >= 2000000000 + self->drift){
+            if (self->x >= 2 * (1000000000 + self->drift)){
                     printf("Clock invariant in the \"Sender->F\" state violated.");
                     exit(-1);
                 }
-                else if (self->x >= 2000000000 - self->drift) {
+                else if (self->x >= 2 * (1000000000 - self->drift)) {
                     lf_set(up, 1);
                     printf("Sender State: F -> G\n");
                     lf_set_mode(G);
@@ -185,25 +189,25 @@ reactor SenderModel {
     mode G{
         reaction(a) -> up, down, a, reset(F), reset(E), reset(H){=
             self->x = lf_time_physical_elapsed() - self->last_time_reset;
-            if (self->x >= 2000000000 + self->drift){
+            if (self->x >= 2 * (1000000000 + self->drift)){
                 printf("Clock invariant in the \"Sender->G\" state violated.");
                 exit(-1);
             }
-            else if (self->x >= 2000000000 - self->drift 
+            else if (self->x >= 2 * (1000000000 - self->drift) 
                     && get_front(self->queue) == 0) {
                 lf_set(down, 1);
                 printf("Sender State: G -> F\n");
                 lf_set_mode(F);
                 dequeue(self->queue);
                 self->last_time_reset = lf_time_physical_elapsed();
-            } else if (self->x >= 2000000000 - self->drift 
+            } else if (self->x >= 2 * (1000000000 - self->drift) 
                     && get_front(self->queue) == 1) {
                 lf_set(down, 1);
                 printf("Sender State: G -> E\n");
                 lf_set_mode(E);
                 dequeue(self->queue);
                 self->last_time_reset = lf_time_physical_elapsed();
-            } else if (self->x >= 2000000000 - self->drift 
+            } else if (self->x >= 2 * (1000000000 - self->drift) 
                     && is_empty(self->queue)) {
                 lf_set(down, 1);
                 printf("Sender State: G -> H\n");
@@ -216,11 +220,11 @@ reactor SenderModel {
     mode H{
         reaction(a) -> up, down, a, reset(A){=
             self->x = lf_time_physical_elapsed() - self->last_time_reset;
-            if (self->x >= 4000000000 + self->drift){
+            if (self->x >= 4 * (1000000000 + self->drift)){
                 printf("Clock invariant in the \"Sender->H\" state violated.");
                 exit(-1);
             }
-            else if (self->x >= 4000000000 - self->drift) {
+            else if (self->x >= 4 * (1000000000 - self->drift)) {
                 printf("Sender State: H -> A\n");
                 lf_set_mode(A);
             }
@@ -241,7 +245,7 @@ reactor ReceiverModel{
     input up: int
     state y: instant_t = 0
     state last_time_reset: instant_t = 0
-    state drift: int = 100000000
+    state drift: instant_t = 10000000
 
     state length: int = 9
 
@@ -271,26 +275,26 @@ reactor ReceiverModel{
     mode Last1{
         reaction(up, a) -> a, reset(Last0), reset(Last1){=
             self->y = lf_time_physical_elapsed() - self->last_time_reset;
-            if (self->y >= 9000000000 + self->drift){
+            if (self->y >= 9 * (1000000000 + self->drift)){
                 printf("Clock invariant in \"Receiver->Last1\" state violated.");
                 exit(-1);
             }
-            else if (up->is_present && self->y >= 3000000000 - self->drift 
-                        && self->y <= 5000000000 + self->drift){
+            else if (up->is_present && self->y >= 3 * (1000000000 - self->drift) 
+                        && self->y <= 5 * (1000000000 + self->drift)){
                 self->last_time_reset = lf_time_physical_elapsed();
                 enqueue(self->queue, 1);
                 lf_set_mode(Last1);
                 printf("Receiver State: LAST1 -> LAST1\n");
             }
-            else if (up->is_present && self->y >= 5000000000 - self->drift 
-                        && self->y <= 7000000000 + self->drift){
+            else if (up->is_present && self->y >= 5 * (1000000000 - self->drift) 
+                        && self->y <= 7 * (1000000000 + self->drift)){
                 self->last_time_reset = lf_time_physical_elapsed();
                 enqueue(self->queue, 0);
                 lf_set_mode(Last0);
                 printf("Receiver State: LAST1 -> LAST0\n");
             }
-            else if (up->is_present && self->y >= 7000000000 - self->drift 
-                        && self->y <= 9000000000 + self->drift){
+            else if (up->is_present && self->y >= 7 * (1000000000 - self->drift) 
+                        && self->y <= 9 * (1000000000 + self->drift)){
                 self->last_time_reset = lf_time_physical_elapsed();
                 enqueue(self->queue, 0);
                 enqueue(self->queue, 1);
@@ -304,26 +308,26 @@ reactor ReceiverModel{
     mode Last0{
         reaction(up, a) -> a, reset(Idle), reset(Last0), reset(Last1){=
             self->y = lf_time_physical_elapsed() - self->last_time_reset;
-            if (self->y >= 7000000000 + self->drift){
+            if (self->y >= 7 * (1000000000 + self->drift)){
                 printf("Clock invariant in \"Receiver->Last0\" state violated.");
                 exit(-1);
             }
-            else if (up->is_present && self->y >= 3000000000 - self->drift 
-                        && self->y <= 5000000000 + self->drift){
+            else if (up->is_present && self->y >= 3 * (1000000000 - self->drift) 
+                        && self->y <= 5 * (1000000000 + self->drift)){
                 self->last_time_reset = lf_time_physical_elapsed();
                 enqueue(self->queue, 0);
                 lf_set_mode(Last0);
                 printf("Receiver State: LAST0 -> LAST0\n");
             }
-            else if (up->is_present && self->y >= 5000000000 - self->drift 
-                        && self->y <= 7000000000 + self->drift){
+            else if (up->is_present && self->y >= 5 * (1000000000 - self->drift) 
+                        && self->y <= 7 * (1000000000 + self->drift)){
                 self->last_time_reset = lf_time_physical_elapsed();
                 enqueue(self->queue, 0);
                 enqueue(self->queue, 1);
                 lf_set_mode(Last1);
                 printf("Receiver State: LAST0 -> LAST1\n");
             }
-            else if (self->y >= 7000000000 - self->drift){
+            else if (self->y >= 7 * (1000000000 - self->drift)){
                 self->last_time_reset = lf_time_physical_elapsed();
                 enqueue(self->queue, 0);
                 printf("Receiver State: LAST0 -> IDLE\n");
